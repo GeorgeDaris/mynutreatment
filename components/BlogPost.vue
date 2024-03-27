@@ -38,7 +38,7 @@ const url = computed(() => {
 </template>
 
 
-<style scoped lang="postcss">
+<style scoped>
 
 /* create new component */
 address {
@@ -95,23 +95,25 @@ article.blog-post {
               background-size: cover;
               filter: blur(1.2rem);
               border-radius: calc(var(--radius-md) * 0.75);
-              z-index: 1;
+              z-index: -1;
+
+            }
+            
+            img {
+                position: relative;
+                max-height: 25rem;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+                border-radius: var(--radius-sm);
+                border-top-left-radius: calc(var(--radius-md) * 0.75);
+                border-top-right-radius: calc(var(--radius-md) * 0.75);
+                /* mask-image: linear-gradient(to top left, red 70%, transparent); */
+                filter: drop-shadow(0rem 0.15rem 0.15rem #00000071);
+                z-index: 2;
             }
         }
 
-        img:not(address img) {
-            position: relative;
-            max-height: 25rem;
-            width: 100%;
-            object-fit: cover;
-            object-position: center;
-            border-radius: var(--radius-sm);
-            border-top-left-radius: calc(var(--radius-md) * 0.75);
-            border-top-right-radius: calc(var(--radius-md) * 0.75);
-            /* mask-image: linear-gradient(to top left, red 70%, transparent); */
-            filter: drop-shadow(0rem 0.15rem 0.15rem #00000071);
-            z-index: 2;
-        }
     }
 
     h1, address, .prose {

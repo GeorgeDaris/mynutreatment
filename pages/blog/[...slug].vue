@@ -10,7 +10,7 @@ useSeoMeta({
   ogTitle: data.value.title,
   description: data.value.description,
   ogDescription: data.value.description,
-  ogImage: `/public${data.value.image}`,
+  ogImage: data.value.image,
   twitterCard: 'summary_large_image',
 })
 
