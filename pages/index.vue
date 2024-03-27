@@ -11,7 +11,7 @@ useSeoMeta({
   ogTitle: "mynutreatment",
   description: "tba",
   ogDescription: "tba",
-  ogImage: "favicon.png",
+  ogImage: "/public/favicon.png",
   twitterCard: 'summary_large_image',
   // themeColor: "#C6DBC3"
 })
