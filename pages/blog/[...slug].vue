@@ -6,11 +6,15 @@ const {data} = await useAsyncData(`content-${route.path}`, () => queryContent().
 );
 
 useSeoMeta({
+  ogType: 'article',
+  ogUrl: `https://www.mynutreatment.gr/${route.path}`,
   title: data.value.title,
   ogTitle: data.value.title,
   description: data.value.description,
   ogDescription: data.value.description,
   ogImage: data.value.image,
+  author: data.author,
+  byl: data.author,
   twitterCard: 'summary_large_image',
 })
 
