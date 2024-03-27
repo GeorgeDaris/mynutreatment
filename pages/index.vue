@@ -6,6 +6,15 @@
 </template>
 
 <script lang="ts" setup>
+useSeoMeta({
+  title: "mynutreatment",
+  ogTitle: "mynutreatment",
+  description: "tba",
+  ogDescription: "tba",
+  ogImage: "favicon.png",
+  twitterCard: 'summary_large_image',
+  // themeColor: "#C6DBC3"
+})
 
 </script>
 

@@ -62,7 +62,7 @@ h1, h2, h3 {
     font-family: var(--header-font);
     font-weight: var(--header-lg-weight);
     font-size: var(--header-lg);
-    text-shadow: .05rem .0rem var(--primary-green);
+    text-shadow: .075rem .0rem var(--primary-green);
 
     &::before {
         content: "";
@@ -74,6 +74,11 @@ h1, h2, h3 {
         left: -0.75rem;
         z-index: -1;
 
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
     }
 }
 
