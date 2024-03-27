@@ -12,7 +12,7 @@ useSeoMeta({
   ogTitle: data.value.title,
   description: data.value.description,
   ogDescription: data.value.description,
-  ogImage: data.value.image,
+  ogImage: `https://mynutreatment.vercel.app/${data.value.image}`,
   author: data.author,
   byl: data.author,
   twitterCard: 'summary_large_image',
