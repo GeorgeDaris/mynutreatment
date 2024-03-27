@@ -1,0 +1,82 @@
+@import "./reset.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+:root {
+    font-size: 16px;
+
+    /* colors */
+    --primary-off-white: #F4F0E6;
+    --dark-blue: #3A3D4C;
+    --dark-brown: #705A52;
+    --primary-green: #C6DBC3;
+    --primary-yellow: #EFE6CB;
+    --primary-red: #EFC0A0;
+    --primary-blue: #C3CADB;
+
+    /* border related */
+    --radius-sm: 1.25rem;
+    --radius-md: 6.25rem;
+    --radius-lg: 12.5rem;
+    --border-regular: 0.125rem;
+
+    /* fonts */
+    --logo-font: 'Josefin Slab', serif;
+    --header-font: 'Roboto Slab', serif;
+
+
+    --header-lg: 2.125rem;
+    --header-lg-weight: 200;
+    --header-md: 1.625rem;
+    --header-md-weight: 200;
+
+
+
+
+}
+
+body {
+    background-color: var(--primary-off-white);
+    color: var(--dark-blue);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+
+    margin: 1rem;
+    display: grid;
+    justify-content: center;
+}
+
+main {
+    max-width: 80rem;
+}
+
+::selection {
+    background-color: var(--primary-green);
+}
+
+h1, h2, h3 {
+    position: relative;
+    z-index: 1;
+
+    font-family: var(--header-font);
+    font-weight: var(--header-lg-weight);
+    font-size: var(--header-lg);
+    text-shadow: .05rem .0rem var(--primary-green);
+
+    &::before {
+        content: "";
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: var(--primary-green);
+        position: absolute;
+        top: 0.5rem;
+        left: -0.75rem;
+        z-index: -1;
+
+    }
+}
+
+p {
+    text-align: justify;
+}

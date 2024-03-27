@@ -1,0 +1,4 @@
+<template>
+  <!-- <TestComp /> -->
+  <NuxtPage />
+</template>
