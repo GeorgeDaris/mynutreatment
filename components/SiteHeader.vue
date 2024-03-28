@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-
+// TODO: Add this to a layout
 </script>
 <template>
     <header>
@@ -30,12 +30,8 @@
 </template>
 <style scoped>
 header a:not(.has-image) {
-    /* background-color: rgba(red, 0); */
-    /* background-image: linear-gradient(to bottom, red, var(--primary-green)); */
-    /* background-position: -20rem; */
     background-image: linear-gradient(to bottom, transparent 60%, var(--primary-green) 40%);
     background-repeat:no-repeat;
-    /* background-position: unset; */
     background-position-x: -10rem;
     transition: all 0.7s ease-out;
 

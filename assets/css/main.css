@@ -47,6 +47,10 @@ body {
     justify-content: center; */
 }
 
+/* * {
+    scrollbar-color: var(--primary-green) var(--primary-off-white) ;
+} */
+
 main {
     max-width: var(--max-width);
     margin-inline: auto;
