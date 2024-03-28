@@ -22,5 +22,12 @@ export default defineNuxtConfig({
         { rel: "icon", type: "image/ico", href: "/favicon.png" }
       ]
     }
+  },
+  experimental: {
+    defaults: {
+      nuxtLink: {
+        activeClass: 'router-link-active'
+      }
+    }
   }
 })

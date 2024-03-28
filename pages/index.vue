@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NuxtLink to="/about">about</NuxtLink>
+    <SiteHeader />
     <TestComp />
   </div>
 </template>

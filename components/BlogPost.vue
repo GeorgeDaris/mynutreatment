@@ -60,7 +60,7 @@ address {
 
 article.blog-post {
     --bp-padding: 1rem;
-    --bp-top-mg: calc(var(--bp-padding) * 2);
+    --bp-top-mg: calc(var(--bp-padding) * 4);
 
     max-width: 45rem;
     padding: var(--bp-padding);
@@ -98,7 +98,7 @@ article.blog-post {
               z-index: -1;
 
             }
-            
+
             img {
                 position: relative;
                 max-height: 25rem;
