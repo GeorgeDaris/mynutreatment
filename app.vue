@@ -1,7 +1,9 @@
 <template>
   <!-- <TestComp /> -->
   <SiteHeader />
-  <NuxtPage />
+  <main>
+    <NuxtPage />
+  </main>
 </template>
 <script setup lang="ts">
 useSeoMeta({

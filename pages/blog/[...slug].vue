@@ -24,9 +24,9 @@ useSeoMeta({
 </script>
 
 <template>
-  <main>
+  <div>
     <BlogPost :post="data" /> 
-  </main>
+  </div>
 </template>
 
 <style scoped>

@@ -47,6 +47,7 @@ header a:not(.has-image) {
 
 
 header {
+    background-color: var(--white);
     background-color: color-mix(in srgb, transparent 20%, var(--white));
     padding-block: 0.5rem;
     padding-inline: 1rem;
@@ -88,6 +89,12 @@ header {
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header nav ul {
+        display: none;
     }
 }
 

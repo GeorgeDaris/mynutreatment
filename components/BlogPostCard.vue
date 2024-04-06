@@ -8,6 +8,7 @@ const props = defineProps<{
     description: string,
     image: string,
     alt: string
+    _path: string
   }
 }>()
 
@@ -60,10 +61,14 @@ const props = defineProps<{
       max-height: 5rem;
       overflow: clip;
       mask-image: linear-gradient(to bottom right, red 70%, transparent);
+
+      /* for alignment when alongside other cards with different heights */
+      margin-block: auto;
     }
 
     &:deep(.button) {
       margin-left: auto;
+      margin-top: auto;
     }
   }
 }

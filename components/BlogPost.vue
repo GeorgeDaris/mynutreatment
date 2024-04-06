@@ -67,7 +67,7 @@ article.blog-post {
     margin-top: var(--bp-top-mg);
     background-color: var(--white);
     border: var(--card-border);
-    border-radius: var(--radius-sm);
+    border-radius: 0;
     border-top-left-radius: var(--radius-md);
     border-top-right-radius: var(--radius-md);
     
@@ -121,5 +121,11 @@ article.blog-post {
       margin-inline: 1rem;
     }
     
+}
+
+@media screen and (max-width: 767px) {
+  article.blog-post {
+    margin-inline: -1rem;
+  }
 }
 </style>

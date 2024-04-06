@@ -9,7 +9,7 @@
     /* colors */
     --primary-off-white: #F4F0E6;
     --white: white;
-    --dark-blue: #3A3D4C;
+    --dark-blue: #3D425F;
     --dark-brown: #705A52;
     --primary-green: #C6DBC3;
     --primary-yellow: #EFE6CB;
@@ -44,6 +44,13 @@
     --dark-blue: #F4F0E6; */
 }
 
+@media screen and (max-width: 767px) {
+    :root {
+        --radius-lg: 10.5rem;
+        --radius-md: 3.25rem;
+    }
+}
+
 body {
     background-color: var(--white);
     color: var(--dark-blue);
@@ -62,10 +69,18 @@ body {
 main {
     max-width: var(--max-width);
     margin-inline: auto;
+    padding-inline: 1rem;
     display: grid;
     justify-content: center;
     /* margin-top: 4rem; */
+
 }
+
+/* @media screen and (max-width: 767px) {
+    main {
+        margin-inline: 0.5rem;
+    }
+} */
 
 ::selection {
     background-color: var(--primary-green);

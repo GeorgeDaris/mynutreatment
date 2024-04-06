@@ -21,8 +21,6 @@ const props = defineProps<{
 .button {
   display: block;
   width: fit-content;
-  padding-inline: 1rem;
-  padding-block: 0.5rem;
   border: var(--border-regular) solid var(--dark-blue);
   border-radius: var(--radius-lg); 
   position: relative;
@@ -41,7 +39,7 @@ const props = defineProps<{
     transition: all 0.3s;
   }
 
-  &:hover::after {
+  &:hover::after, &:focus-within::after {
     bottom: 0rem;
     right: 0rem;
   }
@@ -57,6 +55,13 @@ const props = defineProps<{
   &:deep(a, button) {
     text-decoration: none;
     color: inherit;
+    display: inline-block;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+
+    &:focus-visible {
+      outline: none;
+    }
   }
 }
 </style>
