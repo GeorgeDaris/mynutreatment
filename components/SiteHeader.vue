@@ -47,7 +47,7 @@ header a:not(.has-image) {
 
 
 header {
-    background-color: color-mix(in srgb, transparent 20%, var(--primary-off-white));
+    background-color: color-mix(in srgb, transparent 20%, var(--white));
     padding-block: 0.5rem;
     padding-inline: 1rem;
     margin-inline: auto;
