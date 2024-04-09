@@ -47,7 +47,7 @@ address {
   gap: .5rem;
 
   img {
-    max-width: 2.5rem;
+    max-width: 2.25rem;
     max-height: 3rem;
   }
 
@@ -75,7 +75,7 @@ article.blog-post {
     header {
         display: grid;
         position: relative;
-        gap: 1.5rem;
+        /* gap: 1.5rem; */
         margin-top: calc(var(--bp-padding) - var(--bp-padding) * 4);
         margin-bottom: 1.5rem;
         /* transform: translateY(-2rem); */
@@ -117,8 +117,36 @@ article.blog-post {
 
     }
 
+    h1 {
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
     h1, address, .prose {
       margin-inline: 1rem;
+    }
+
+    .prose {
+      &:deep(p) {
+        padding-block: 0.25rem;
+        text-indent: 1rem;
+
+        &:first-of-type {
+          text-indent: 0;
+        }
+      }
+
+      &:deep(h2 + p, h1 + p) {
+        text-indent: 0;
+      }
+
+      &:deep(img) {
+        border-radius: var(--radius-sm);
+        margin-block: 0.5rem;
+        margin-inline: auto;
+      }
+
+      
     }
     
 }

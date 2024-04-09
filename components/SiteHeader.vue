@@ -2,7 +2,7 @@
 // TODO: Add this to a layout
 </script>
 <template>
-    <header>
+    <header class="site-header">
         <NuxtLink to="/" class="has-image">
             <img src="/assets/icons/logo.svg" alt="" aria-hidden="true" width="70" height="70"
         </NuxtLink>
@@ -29,7 +29,7 @@
     
 </template>
 <style scoped>
-header a:not(.has-image) {
+/* header a:not(.has-image) {
     background-image: linear-gradient(to bottom, transparent 60%, var(--primary-green) 40%);
     background-repeat:no-repeat;
     background-position-x: -10rem;
@@ -43,12 +43,12 @@ header a:not(.has-image) {
 .router-link-active:not(.has-image) {
     background-image: linear-gradient(to bottom, transparent 60%, var(--primary-green) 40%);
     background-position-x: 0rem;
-}
+} */
 
 
 header {
     background-color: var(--white);
-    background-color: color-mix(in srgb, transparent 20%, var(--white));
+    background-color: var(--white-semi-transparent);
     padding-block: 0.5rem;
     padding-inline: 1rem;
     margin-inline: auto;

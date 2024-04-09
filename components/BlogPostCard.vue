@@ -9,25 +9,37 @@ const props = defineProps<{
     image: string,
     alt: string
     _path: string
-  }
+  },
+  hideButton?: boolean
 }>()
 
 </script>
 <template>
-  <article class="blog-card">
-      <img :src="post.image" :alt="post.alt" loading="lazy">
-      <div class="content">
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.description }}</p>
-        <MainButton size="small">
-          <NuxtLink :to="post._path">Περισσότερα</NuxtLink>
-        </MainButton>
-      </div>
-  </article>
+    <article class="blog-card">
+        <img :src="post.image" :alt="post.alt" loading="lazy">
+        <div class="content">
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.description }}</p>
+          <MainButton size="small" v-if="!hideButton" class="post-link">
+            <NuxtLink :to="post._path">Περισσότερα</NuxtLink>
+          </MainButton>
+        </div>
+    </article>
 </template>
 
 
 <style scoped>
+/* .post-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+
+} */
+
+
 .blog-card {
   display: grid;
   grid-template-rows: 12rem auto;
@@ -46,6 +58,7 @@ const props = defineProps<{
 
   h3 {
     font-size: var(--header-md);
+    font-weight: var(--header-md-weight);
 
     &::before {
       display: none;

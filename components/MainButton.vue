@@ -9,12 +9,12 @@ interface Size {
   type: "small" | "regular" | "large"
 }
 
-const props = defineProps<{
+const props = defineProps({
   size: {
-    type: Size,
+    type: String as PropType<Size>,
     required: false
   }
-}>()
+})
 </script>
 
 <style scoped>
