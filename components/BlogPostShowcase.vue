@@ -72,7 +72,7 @@ const posts = await queryContent('blog').limit(4).find();
 
     p {
       margin-block: unset;
-      max-height: 9.7rem;
+      max-height: 9.7rem !important;
 
       border-bottom-right-radius: calc(var(--radius-sm) + 1rem);
     }
@@ -104,7 +104,7 @@ const posts = await queryContent('blog').limit(4).find();
 
     p {
       margin-block: unset;
-      max-height: 9.7rem;
+      max-height: 9.7rem !important;
     }
   }
 
@@ -133,7 +133,7 @@ const posts = await queryContent('blog').limit(4).find();
 
     p {
       margin-block: unset;
-      max-height: 9.7rem;
+      max-height: 9.7rem !important;
     }
   }
 
