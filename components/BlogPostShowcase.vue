@@ -38,7 +38,8 @@ const posts = await queryContent('blog').limit(4).find();
   }
 
   .sh-card {
-    max-width: unset;
+    /* TODO: Remove this and fix CSS specificity */
+    max-width: unset !important;
     cursor: pointer;
     transition: all 0.3s ease, box-shadow 0.4s 0.1s ease;
     filter: opacity(0);
