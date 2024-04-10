@@ -21,7 +21,8 @@ const props = defineProps<{
           <h3>{{ post.title }}</h3>
           <p>{{ post.description }}</p>
           <MainButton size="small" v-if="!hideButton" class="post-link">
-            <NuxtLink :to="post._path">Περισσότερα</NuxtLink>
+            <NuxtLink :to="post._path">Περισσότερα
+            </NuxtLink>
           </MainButton>
         </div>
     </article>
@@ -73,16 +74,35 @@ const props = defineProps<{
     p {
       max-height: 5rem;
       overflow: clip;
-      mask-image: linear-gradient(to bottom right, red 70%, transparent);
+      position: relative;
+      /* mask-image: linear-gradient(to bottom right, red 70%, transparent); */
 
       /* for alignment when alongside other cards with different heights */
       margin-block: auto;
+
+      /* truncated text effect */
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -0.2rem;
+        right: 0;
+        width: 100%;
+        height: 1.6rem;
+        background-image: linear-gradient(to right, transparent 20%, white);
+        pointer-events: none;
+      }
     }
 
     &:deep(.button) {
       margin-left: auto;
       margin-top: auto;
     }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .blog-card {
+    max-width: unset;
   }
 }
 

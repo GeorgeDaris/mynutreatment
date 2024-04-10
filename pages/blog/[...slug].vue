@@ -26,6 +26,7 @@ useSeoMeta({
 <template>
   <div>
     <BlogPost :post="data" /> 
+    <BlogPostReadMore />
   </div>
 </template>
 

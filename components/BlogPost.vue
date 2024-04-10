@@ -65,9 +65,10 @@ article.blog-post {
     max-width: 45rem;
     padding: var(--bp-padding);
     margin-top: var(--bp-top-mg);
+    margin-inline: auto;
     background-color: var(--white);
     border: var(--card-border);
-    border-radius: 0;
+    border-radius: var(--radius-sm);
     border-top-left-radius: var(--radius-md);
     border-top-right-radius: var(--radius-md);
     

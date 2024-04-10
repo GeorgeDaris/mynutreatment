@@ -1,3 +1,3 @@
 <template>
-    <div>About page λέμε</div>
+    <!-- <div>About page λέμε</div> -->
 </template>

@@ -52,6 +52,10 @@
         --radius-lg: 10.5rem;
         --radius-md: 3.25rem;
     }
+
+    body {
+        overflow-x: hidden;
+    }
 }
 
 body {
