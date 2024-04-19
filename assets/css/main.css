@@ -93,6 +93,11 @@ main {
     background-color: var(--primary-green);
 }
 
+img {
+    color: transparent;
+    /* hiding alt text until the image loads */
+}
+
 h1, h2, h3 {
     position: relative;
     z-index: 1;

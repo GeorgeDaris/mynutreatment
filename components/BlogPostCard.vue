@@ -16,7 +16,8 @@ const props = defineProps<{
 </script>
 <template>
     <article class="blog-card">
-        <img :src="post.image" :alt="post.alt" loading="lazy">
+        <!-- <img :src="post.image" :alt="post.alt" loading="lazy"> -->
+        <NuxtPicture :src="post.image" :alt="post.alt" loading="lazy" width="600"/>
         <div class="content">
           <h3>{{ post.title }}</h3>
           <p>{{ post.description }}</p>
@@ -49,7 +50,12 @@ const props = defineProps<{
   overflow: hidden;
   max-width: 25rem;
 
-  img {
+  &:deep(picture) {
+    height: 100%;
+    width: 100%;
+  }
+  
+  &:deep(img) {
     height: 100%;
     width: 100%;
     /* max-height: 15rem; */

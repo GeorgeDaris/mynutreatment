@@ -98,7 +98,7 @@ const posts = await queryContent('blog').limit(4).find();
       grid-row: 1 / 3;
     }
 
-    img {
+    picture {
       grid-row: 1 / 3;
     }
 
@@ -127,7 +127,7 @@ const posts = await queryContent('blog').limit(4).find();
       grid-row: 1 / 3;
     }
 
-    img {
+    picture {
       grid-row: 1 / 3;
     }
 
@@ -150,15 +150,16 @@ const posts = await queryContent('blog').limit(4).find();
     animation-delay: 1s;
     animation-fill-mode: forwards;
 
-
-    img {
-      max-height: 60%;
-      max-width: 60%;
+    picture {
       position: absolute;
-      border-top-left-radius: 50rem;
       bottom: 0;
       right: 0;
+      max-height: 60%;
+      max-width: 60%;
+    }
 
+    img {
+      border-top-left-radius: 50rem;
       /* max-height: 5rem; */
     }
 
@@ -175,16 +176,20 @@ const posts = await queryContent('blog').limit(4).find();
 
         .sh-card:nth-of-type(2) {
           border-top-right-radius: var(--radius-sm);
+          grid-template-columns: 1fr 0.5fr;
+          gap: 0;
         }
 
         .sh-card:nth-of-type(3) {
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: 1fr 0.5fr;
           grid-template-rows: 1fr 1fr;
+          gap: 0;
 
           .content {
             grid-column: 1 / 2;
 
             p {
+              max-height: 4.7rem !important;
               /* width: 187%;
               background-color: var(--white); */
             }
@@ -200,14 +205,17 @@ const posts = await queryContent('blog').limit(4).find();
           display: grid;
           grid-template-rows: auto 10rem;
 
-          img {
+          picture {
             max-width: unset;
             max-height: unset;
             /* width: 100%;
             height: 100%; */
             position: unset;
-            border-radius: unset;
             grid-row: 2 / 3;
+
+            img {
+              border-radius: unset;
+            }
           }
         }
     }

@@ -7,9 +7,11 @@ export default defineNuxtConfig({
       'postcss-nested': {}
     }
   },
-  modules: [
-    '@nuxt/content'
-  ],
+  modules: ['@nuxt/content', "@nuxt/image"],
+  image: {
+    // dir: 'assets/images',
+    format: ['avif', 'webp', 'png']
+  },
   // content: {
     
   // }

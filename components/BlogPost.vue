@@ -14,7 +14,10 @@ const props = defineProps<{
 }>()
 
 const url = computed(() => {
-  return `url(${props.post.image})`
+  // return `url(${props.post.image})`
+  const img = useImage()
+  const imgUrl = img(props.post.image, { width: 200 })
+  return `url('${imgUrl}')`
 })
 </script>
 
@@ -22,7 +25,9 @@ const url = computed(() => {
   <article class="blog-post">
       <header>
         <div class="img-wrapper">
-          <img :src="post.image" :alt="post.alt">
+          <NuxtPicture :src="post.image" :alt="post.alt"  width="686" height="420" sizes="sm:800" placeholder fit="inside"/>
+
+          <!-- <img :src="post.image" :alt="post.alt"> -->
         </div>
         <h1>{{ post.title }}</h1>
         <address>
@@ -91,19 +96,20 @@ article.blog-post {
               position: absolute;
               bottom: -0.5rem;
               width: 100%;
-              height: 100%;
+              height: 80%;
               background-image: v-bind(url);
               background-position: center;
               background-size: cover;
               filter: blur(1.2rem);
-              border-radius: calc(var(--radius-md) * 0.75);
+              /* border-radius: calc(var(--radius-md) * 0.75); */
               z-index: -1;
 
             }
 
-            img {
+            &:deep(img) {
                 position: relative;
-                max-height: 25rem;
+                max-height: 27rem;
+                height: auto;
                 width: 100%;
                 object-fit: cover;
                 object-position: center;
