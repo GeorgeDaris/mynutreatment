@@ -16,7 +16,7 @@
         <div class="card"></div>
       </div>
 
-      <NuxtPicture src="/images/services/measuring.jpg" width="350" height="450" sizes="sm:500" loading="lazy"/>
+      <NuxtPicture src="/images/services/measuring-client.jpg" width="350" height="450" sizes="sm:500" loading="lazy"/>
       <p class="measure-para">Σε κάθε συνεδρία πραγματοποιούμε αξιολόγηση σωματικού βάρους, ανάλογα τον διαιτώμενο και τις ανάγκες του. Τα εργαλεία μας είναι ο λιπομετρητής για την ανάλυση σύστασης σώματος και η μεζούρα για την παρακολούθηση πόντων σε συγκεκριμένα σημεία στο σώμα.</p>
 
       <div class="container">
