@@ -19,7 +19,7 @@
 <style scoped>
 
 header {
-  margin-top: 3rem;
+  margin-top: 5rem;
   margin-bottom: 2rem;
 }
 
@@ -36,6 +36,10 @@ h2 {
     align-content: space-evenly;
     list-style-type: none;
     padding-left: 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(20rem, 1fr));
+    justify-items: center;
 
     li {
       display: flex;

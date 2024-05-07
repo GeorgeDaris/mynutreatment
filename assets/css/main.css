@@ -8,8 +8,10 @@
 
     /* colors */
     --primary-off-white: #F4F0E6;
-    --white: white;
-    --white-semi-transparent: rgba(255, 255, 255, 0.801);
+    --white: #FAF8F1;
+    /* --white-semi-transparent: rgba(255, 255, 255, 0.801); */
+    --white-semi-transparent: #faf8f1cb;
+    --pure-white: white;
     --dark-blue: #3D425F;
     --dark-brown: #705A52;
     --primary-green: #C6DBC3;
@@ -41,6 +43,11 @@
 
 
     --max-width: 80rem;
+
+    --shadow-color-1: #dcddde;
+    --shadow-color-2: #f9fafa;
+    --shadow-color-3: #f8f8f8;
+    --shadow-color-4: #f4f5f5;
 
     /* --primary-off-white: #3A3D4C;
     --white: #242631;
@@ -76,6 +83,7 @@ body {
 main {
     max-width: var(--max-width);
     margin-inline: auto;
+    padding-inline: 5rem;
     padding-inline: 1rem;
     display: grid;
     justify-content: center;
@@ -83,11 +91,12 @@ main {
 
 }
 
-/* @media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
     main {
-        margin-inline: 0.5rem;
+        /* margin-inline: 0.5rem; */
+        padding-inline: 1rem;
     }
-} */
+}
 
 ::selection {
     background-color: var(--primary-green);
@@ -103,12 +112,13 @@ h1, h2, h3 {
     z-index: 1;
 
     font-family: var(--header-font);
-    font-weight: var(--header-lg-weight);
+    font-weight: var(--header-md-weight);
     font-size: var(--header-lg);
-    text-shadow: .075rem .0rem var(--primary-green);
+    text-shadow: .075rem .2rem var(--primary-green);
+    /* margin-bottom: 1rem; */
 
     &::before {
-        content: "";
+        /* content: ""; */
         /* width: 1.5rem; */
         height: 45%;
         aspect-ratio: 1 / 1;
@@ -126,6 +136,33 @@ h1, h2, h3 {
     }
 }
 
+h2, h3 {
+    text-shadow: .075rem .0rem var(--primary-green);
+}
+
+.prose {
+    p {
+      padding-block: 0.35rem;
+      text-indent: 1rem;
+
+      &:first-of-type {
+        text-indent: 0;
+      }
+    }
+
+    h2 + p, h1 + p {
+      text-indent: 0;
+    }
+
+    img {
+      border-radius: var(--radius-sm);
+      margin-block: 0.5rem;
+      margin-inline: auto;
+    }
+
+    
+  }
+
 h1:not(.prose *, .blog-post *) {
     font-size: var(--header-xl);
 }
@@ -138,6 +175,12 @@ h1:not(.prose *, .blog-post *) {
     &::after, &::before {
         content: none;
     }
+}
+
+h3 {
+    text-shadow: unset;
+    font-weight: var(--header-md-weight);
+    font-size: var(--header-md);
 }
 
 p {

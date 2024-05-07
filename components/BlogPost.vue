@@ -25,7 +25,7 @@ const url = computed(() => {
   <article class="blog-post">
       <header>
         <div class="img-wrapper">
-          <NuxtPicture :src="post.image" :alt="post.alt"  width="686" height="420" sizes="sm:800" placeholder fit="inside"/>
+          <NuxtPicture :src="post.image" :alt="post.alt"  width="886" height="420" sizes="sm:800" placeholder fit="cover" />
 
           <!-- <img :src="post.image" :alt="post.alt"> -->
         </div>
@@ -71,7 +71,7 @@ article.blog-post {
     padding: var(--bp-padding);
     margin-top: var(--bp-top-mg);
     margin-inline: auto;
-    background-color: var(--white);
+    background-color: var(--pure-white);
     border: var(--card-border);
     border-radius: var(--radius-sm);
     border-top-left-radius: var(--radius-md);
@@ -133,7 +133,7 @@ article.blog-post {
       margin-inline: 1rem;
     }
 
-    .prose {
+    /* .prose {
       &:deep(p) {
         padding-block: 0.25rem;
         text-indent: 1rem;
@@ -154,7 +154,7 @@ article.blog-post {
       }
 
       
-    }
+    } */
     
 }
 

@@ -1,6 +1,14 @@
 <template>
   <div>
     <!-- <TestComp /> -->
+    
+    <img src="/assets/icons/logo.svg" alt="">
+    <h1 class="remove-pseudo">
+      Coming soon!
+    </h1>
+    <address>
+      <a href="mailto:mynutreatment@info.com">mynutreatment@info.com</a>
+    </address>
   </div>
 </template>
 
@@ -17,6 +25,14 @@ useSeoMeta({
 
 </script>
 
-<style>
+<style scoped>
+  div {
+    display: grid;
+    justify-items: center;
 
+    img {
+      width: 80%;
+    }
+
+  }
 </style>

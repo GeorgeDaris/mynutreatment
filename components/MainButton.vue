@@ -21,7 +21,10 @@ const props = defineProps({
 .button {
   display: block;
   width: fit-content;
-  border: var(--border-regular) solid var(--dark-blue);
+  height: fit-content;
+  /* width: fit-content;
+  height: fit-content;
+  border: var(--border-regular) solid var(--dark-blue); */
   border-radius: var(--radius-lg); 
   position: relative;
   cursor: pointer;
@@ -33,9 +36,9 @@ const props = defineProps({
     border-radius: inherit;
     background-color: var(--primary-green);
     position: absolute;
-    bottom: -0.5rem;
-    right: -0.5rem;
-    z-index: -1;
+    bottom: -0.4rem;
+    right: -0.4rem;
+    z-index: 1;
     transition: all 0.3s;
   }
 
@@ -58,6 +61,12 @@ const props = defineProps({
     display: inline-block;
     padding-inline: 1rem;
     padding-block: 0.5rem;
+    width: fit-content;
+    height: fit-content;
+    border: var(--border-regular) solid var(--dark-blue);
+    border-radius: inherit;
+    position: relative;
+    z-index: 2;
 
     &:focus-visible {
       outline: none;

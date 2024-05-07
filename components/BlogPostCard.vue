@@ -17,7 +17,7 @@ const props = defineProps<{
 <template>
     <article class="blog-card">
         <!-- <img :src="post.image" :alt="post.alt" loading="lazy"> -->
-        <NuxtPicture :src="post.image" :alt="post.alt" loading="lazy" width="600"/>
+        <NuxtPicture :src="post.image" :alt="post.alt" loading="lazy" width="600" sizes="sm:500"/>
         <div class="content">
           <h3>{{ post.title }}</h3>
           <p>{{ post.description }}</p>
@@ -49,12 +49,13 @@ const props = defineProps<{
   border: var(--card-border);
   overflow: hidden;
   max-width: 25rem;
+  background-color: var(--pure-white);
 
   &:deep(picture) {
     height: 100%;
     width: 100%;
   }
-  
+
   &:deep(img) {
     height: 100%;
     width: 100%;
@@ -94,7 +95,7 @@ const props = defineProps<{
         right: 0;
         width: 100%;
         height: 1.6rem;
-        background-image: linear-gradient(to right, transparent 20%, white);
+        background-image: linear-gradient(to right, transparent 20%, var(--pure-white));
         pointer-events: none;
       }
     }

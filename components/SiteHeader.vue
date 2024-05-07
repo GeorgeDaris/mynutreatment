@@ -45,11 +45,12 @@ const toggleNav = (() => {
 header {
     background-color: var(--white);
     background-color: var(--white-semi-transparent);
-    padding-block: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
     padding-inline: 1rem;
     margin-inline: auto;
     margin-bottom: 2rem;
-    max-width: var(--max-width);
+    max-width: calc(var(--max-width) + 8rem);
     border-bottom-right-radius: var(--radius-sm);
     border-bottom-left-radius: var(--radius-sm);
     backdrop-filter: blur(1rem);
