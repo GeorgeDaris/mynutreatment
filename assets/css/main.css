@@ -23,6 +23,7 @@
 
     /* border related */
     --radius-sm: 1.25rem;
+    --radius-40: 2.5rem;
     --radius-60: 3.75rem;
     --radius-md: 6.25rem;
     --radius-lg: 12.5rem;
@@ -40,6 +41,8 @@
     --header-lg-weight: 200;
     --header-md: 1.625rem;
     --header-md-weight: 360;
+    --header-sm: 1.225rem;
+    --header-sm-weight: 200;
 
 
     --max-width: 80rem;
@@ -182,6 +185,13 @@ h3 {
     font-weight: var(--header-md-weight);
     font-size: var(--header-md);
 }
+
+
+h4 {
+    font-weight: var(--header-sm-weight);
+    font-size: var(--header-sm);
+}
+
 
 p {
     text-align: justify;
