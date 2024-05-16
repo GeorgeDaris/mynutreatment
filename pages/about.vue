@@ -37,7 +37,7 @@ useSeoMeta({
   ogType: 'article',
   ogUrl: `https://www.mynutreatment.gr/${route.path}`,
   title: `mynutreatment | ${data.value.title}`,
-  ogTitle: data.value.title,
+  ogTitle: `mynutreatment | ${data.value.title}`,
   description: data.value.description,
   ogDescription: data.value.description,
   ogImage: `https://mynutreatment.vercel.app/${data.value.image}`,
