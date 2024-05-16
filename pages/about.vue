@@ -1,14 +1,14 @@
 <template>
     <section>
         <!-- {{ data }} -->
-        <!-- <NuxtPicture :src="data.image" :alt="data.alt"  width="886" height="420" sizes="sm:800" placeholder fit="cover" />
-        <div>
+        <NuxtPicture :src="data.image" :alt="data.alt" width="480" height="686" sizes="sm:800" placeholder fit="cover" class="profile-picture" />
+        <div class="text">
             <h1>{{ data.title }}</h1>
-            <div>
+            <div class="prose">
                 <ContentRenderer :value="data" />
             </div>
-        </div> -->
-        <NuxtPicture src="/images/mynutreatment-resume.png" alt="resume"  width="480" height="686" sizes="sm:800" placeholder fit="cover" class="profile-picture" />
+        </div>
+        <!-- <NuxtPicture src="/images/mynutreatment-resume.png" alt="resume"  width="480" height="686" sizes="sm:800" placeholder fit="cover" class="profile-picture" />
         <div class="text">
             <h1 class="remove-pseudo">Βιογραφικό</h1>
             <div class="prose">
@@ -19,13 +19,30 @@
 <p>Στα χρόνια που ακολούθησαν έχει παρακολουθήσει πλήθος συνεδριών με θέματα όπως: Μεσογειακή Διατροφή, Κλινική Διατροφή και Μεταβολισμός,  Σακχαρώδης Διαβήτης, Καρκίνος, Αθηροσκλήρωση, Παχυσαρκία κ.α.</p>
 <p>Στο πλαίσιο διαρκούς εκπαίδευσης έχει παρακολουθήσει ποικίλα εκπαιδευτικά σεμινάρια όπως: «Διατροφικές διαταραχές και Παχυσαρκία» και «Διατροφικές παρεμβάσεις στα Νοσήματα Εντέρου».</p>
             </div>
-        </div>
+        </div> -->
     </section>
 </template>
 <script setup>
 // const route = useRoute();
 
 // const {data} = await useAsyncData('about', () => queryContent('/main').findOne())
+
+const {data} = await useAsyncData('about', async () => {
+    return await queryContent('main/about').findOne();
+})
+
+const route = useRoute();
+
+useSeoMeta({
+  ogType: 'article',
+  ogUrl: `https://www.mynutreatment.gr/${route.path}`,
+  title: `mynutreatment | ${data.value.title}`,
+  ogTitle: data.value.title,
+  description: data.value.description,
+  ogDescription: data.value.description,
+  ogImage: `https://mynutreatment.vercel.app/${data.value.image}`,
+  twitterCard: 'summary_large_image',
+})
 </script>
 <style scoped>
 section {
