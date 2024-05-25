@@ -16,6 +16,9 @@ useSeoMeta({
   author: data.author,
   byl: data.author,
   twitterCard: 'summary_large_image',
+  twitterTitle: data.value.title,
+  twitterDescription: data.value.description,
+  twitterImage: `https://mynutreatment.vercel.app/${data.value.image}`
 })
 
 

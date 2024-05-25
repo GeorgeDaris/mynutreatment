@@ -1,7 +1,8 @@
 <template>
-  <div class="blog-showcase">
+  <div class="blog-showcase" :class="isSection ? 'block' : ''">
     <header>
-      <h1>Blog</h1>
+      <h1 v-if="!isSection">Blog</h1>
+      <h2 v-else class="h1-size">Blog</h2>
     </header>
       <template v-for="post in posts" :id="post.title">
         <BlogPostCard :post="post" :hide-button="true" class="sh-card" tabindex="0" @click="$router.push(post._path)" :aria-label="post.title" />
@@ -10,12 +11,18 @@
 </template>
 
 <script setup>
-const posts = await queryContent('blog').limit(4).find();
+// const { data } = await useAsyncData('posts', () => queryContent('blog').limit(4).find();)
+const posts = await 
+queryContent('blog').sort({_id: -1}).limit(4).find();
+
+const props = defineProps({
+  isSection: Boolean
+})
 </script>
 
 <style>
 .blog-showcase {
-  --gap: 1rem;
+  --gap: 2rem;
 
   display: grid;
   gap: var(--gap);
@@ -31,6 +38,8 @@ const posts = await queryContent('blog').limit(4).find();
     grid-row: 1 / 2;
     display: grid;
     align-content: center;
+    /* for the landing page */
+    width: 100%; 
 
     h1 {
       margin-left: 1rem;

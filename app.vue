@@ -75,6 +75,18 @@ useHead({
   }
 }
 
+@keyframes slidefromrightabout {
+  from {
+    transform: translateX(4rem) translateY(8rem);
+    filter: opacity(0);
+  }
+
+  to {
+    transform: translateX(-5rem) translateY(8rem);
+    filter: opacity(1);
+  }
+}
+
 @keyframes slidefromtop {
   from {
     transform: translateY(-4rem);

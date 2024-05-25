@@ -1,7 +1,8 @@
 <template>
   <section>
     <header>
-      <h2 class="remove-pseudo">Διαβάστε περισσότερα</h2>
+      <h2 v-if="posts.length > 0" class="remove-pseudo">Διαβάστε περισσότερα</h2>
+      <h2 v-else class="remove-pseudo">Περισσότερα σύντομα...</h2>
     </header>
     <ul class="post-container">
       <li v-for="post in posts" :id="post.title">
@@ -12,7 +13,7 @@
   </section>
 </template>
 
-<script lang="ts" setup>
+<script setup>
  const posts = await queryContent('blog').skip(4).find();
 </script>
 

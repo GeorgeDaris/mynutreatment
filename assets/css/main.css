@@ -9,15 +9,18 @@
     /* colors */
     --primary-off-white: #F4F0E6;
     --white: #FAF8F1;
+    --white-darker: #ddd9cb;
     /* --white-semi-transparent: rgba(255, 255, 255, 0.801); */
     --white-semi-transparent: #faf8f1cb;
     --pure-white: white;
     --dark-blue: #3D425F;
+    /* --dark-blue: #3A3D4C; */
     --dark-brown: #705A52;
     --primary-green: #C6DBC3;
     --primary-yellow: #EFE6CB;
     --primary-red: #EFC0A0;
     --primary-blue: #C3CADB;
+    --off-red: #F4DAC9;
 
     --light-grey: #c2c2ca;
 
@@ -36,11 +39,11 @@
     --header-font: 'Roboto Slab', serif;
 
 
-    --header-xl: 4.125rem;
+    --header-xl: 4rem;
     --header-lg: 2.125rem;
     --header-lg-weight: 200;
     --header-md: 1.625rem;
-    --header-md-weight: 360;
+    --header-md-weight: 340;
     --header-sm: 1.225rem;
     --header-sm-weight: 200;
 
@@ -61,10 +64,24 @@
     :root {
         --radius-lg: 10.5rem;
         --radius-md: 3.25rem;
+        --header-xl: 3.43rem;
+        --header-lg: 1.85rem;
     }
 
     body {
         overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width: 1273px) and (min-width: 1105px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1105px) and (min-width: 767px) {
+    :root {
+        font-size: 13px;
     }
 }
 
@@ -79,9 +96,15 @@ body {
     justify-content: center; */
 }
 
-/* * {
-    scrollbar-color: var(--primary-green) var(--primary-off-white) ;
-} */
+@media screen and (max-width: 767px) {
+    /* body {
+        font-size: 1rem;
+    } */
+}
+
+* {
+    scrollbar-color: var(--white-darker) var(--white) ;
+}
 
 main {
     max-width: var(--max-width);
@@ -103,6 +126,10 @@ main {
 
 ::selection {
     background-color: var(--primary-green);
+}
+
+.underlined {
+    background-image: linear-gradient(to bottom, transparent 60%, var(--primary-green) 40%);
 }
 
 img {
@@ -153,8 +180,16 @@ h2, h3 {
       }
     }
 
+    p, ul, ol, li {
+      padding-block: 0.35rem;
+    }
+
     h2 + p, h1 + p {
       text-indent: 0;
+    }
+
+    h2, h3, h4, h5 {
+      padding-block: 0.5rem;
     }
 
     img {
@@ -168,6 +203,16 @@ h2, h3 {
 
 h1:not(.prose *, .blog-post *) {
     font-size: var(--header-xl);
+}
+
+.h1-size {
+    font-size: calc(var(--header-xl) - 0.4rem);
+    text-shadow: .075rem .2rem var(--primary-green);
+
+}
+
+.block {
+    margin-block: 8rem;
 }
 
 .prose h2 {
@@ -195,6 +240,23 @@ h4 {
 
 p {
     text-align: justify;
+}
+
+.truncated-text {
+    position: relative;
+    max-height: 9.7rem;
+    overflow: clip;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -0.2rem;
+        right: 0;
+        width: 100%;
+        height: 1.6rem;
+        background-image: linear-gradient(to right, transparent 20%, var(--pure-white));
+        pointer-events: none;
+    }
 }
 
 /* Prose related */

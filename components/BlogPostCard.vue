@@ -17,7 +17,7 @@ const props = defineProps<{
 <template>
     <article class="blog-card">
         <!-- <img :src="post.image" :alt="post.alt" loading="lazy"> -->
-        <NuxtPicture :src="post.image" :alt="post.alt" loading="lazy" width="600" sizes="sm:500"/>
+        <NuxtPicture :src="post.image" :alt="post.alt" loading="lazy" width="600" height="480" sizes="sm:500"/>
         <div class="content">
           <h3>{{ post.title }}</h3>
           <p>{{ post.description }}</p>

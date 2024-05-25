@@ -1,18 +1,23 @@
 <template>
-  <div>
+  <div class="wrapper">
     <!-- <TestComp /> -->
     
-    <img src="/assets/icons/logo.svg" alt="">
+    <!-- <img src="/assets/icons/logo.svg" alt="">
     <h1 class="remove-pseudo">
       Coming soon!
     </h1>
     <address>
       <a href="mailto:mynutreatment@info.com">mynutreatment@info.com</a>
-    </address>
+    </address> -->
+    <HeroSection />
+    <AboutCard :data="data" :is-section="true" />
+    <LandingServices />
+    <BlogPostShowcase :is-section="true" />
+
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 useSeoMeta({
   title: "mynutreatment",
   ogTitle: "mynutreatment",
@@ -23,10 +28,15 @@ useSeoMeta({
   themeColor: "#C6DBC3"
 })
 
+
+const {data} = await useAsyncData('about', async () => {
+    return await queryContent('main/landing-page/about').findOne();
+})
+
 </script>
 
 <style scoped>
-  div {
+  .wrapper {
     display: grid;
     justify-items: center;
 
