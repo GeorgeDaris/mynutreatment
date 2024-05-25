@@ -13,12 +13,13 @@ useSeoMeta({
   description: data.value.description,
   ogDescription: data.value.description,
   ogImage: `https://mynutreatment.vercel.app/${data.value.image}`,
-  author: data.author,
-  byl: data.author,
+  author: data.value.author,
+  byl: data.value.author,
   twitterCard: 'summary_large_image',
   twitterTitle: data.value.title,
   twitterDescription: data.value.description,
   twitterImage: `https://mynutreatment.vercel.app/${data.value.image}`
+  // { property: 'article:author', content: article.value.author }
 })
 
 
