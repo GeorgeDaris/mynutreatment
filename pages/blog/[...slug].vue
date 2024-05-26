@@ -19,14 +19,15 @@ useSeoMeta({
   twitterTitle: data.value.title,
   twitterDescription: data.value.description,
   twitterImage: `https://mynutreatment.vercel.app/${data.value.image}`,
-  ogSiteName: "mynutreatment"
+  ogSiteName: "mynutreatment",
+  articleAuthor: data.value.author
 })
 
-useHead({
-  meta: [
-    { property: 'article:author', content: article.value.author }
-  ]
-})
+// useHead({
+//   meta: [
+//     { property: 'article:author', content: data.value.author }
+//   ]
+// })
 
 
 
