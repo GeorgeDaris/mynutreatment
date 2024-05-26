@@ -10,8 +10,8 @@ export default defineNuxtConfig({
   modules: ['@nuxt/content', "@nuxt/image"],
   image: {
     // dir: 'assets/images',
-    format: ['avif', 'webp', 'png'],
-    provider: 'ipx'
+    provider: 'IPX',
+    format: ['avif', 'webp', 'png']
   },
   // content: {
     
