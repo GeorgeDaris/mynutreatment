@@ -244,7 +244,7 @@ p {
 
 .truncated-text {
     position: relative;
-    max-height: 9.7rem;
+    max-height: 8.4rem;
     overflow: clip;
 
     &::after {

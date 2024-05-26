@@ -18,8 +18,14 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
   twitterTitle: data.value.title,
   twitterDescription: data.value.description,
-  twitterImage: `https://mynutreatment.vercel.app/${data.value.image}`
-  // { property: 'article:author', content: article.value.author }
+  twitterImage: `https://mynutreatment.vercel.app/${data.value.image}`,
+  ogSiteName: "mynutreatment"
+})
+
+useHead({
+  meta: [
+    { property: 'article:author', content: article.value.author }
+  ]
 })
 
 
