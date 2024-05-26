@@ -26,7 +26,7 @@
       <ContentRenderer :value="intro" class="text"/>
     <!-- </div> -->
     <div class="logo-container hero" >
-      <NuxtPicture src="/images/landing-page/hero.png" alt="mynutreatment"  width="520" height="480" sizes="sm:800" placeholder fit="cover" />
+      <NuxtPicture src="/images/landing-page/hero.png" alt="mynutreatment"  width="520" height="480" sizes="sm:800" placeholder fit="cover" :modifiers="{ grayscale: true, tint: '#00DC82' }" />
     </div>
     <MainButton class="cta-button" size="large">
       <NuxtLink to="/contact">{{ intro.buttonText }}
