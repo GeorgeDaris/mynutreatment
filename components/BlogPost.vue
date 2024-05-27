@@ -25,7 +25,7 @@ const url = computed(() => {
   <article class="blog-post">
       <header>
         <div class="img-wrapper">
-          <NuxtPicture :src="post.image" :alt="post.alt"  width="886" height="420" sizes="sm:800" placeholder fit="cover" />
+          <NuxtPicture :src="post.image" :alt="post.alt"  width="886" height="620" sizes="sm:800" placeholder fit="cover" />
 
           <!-- <img :src="post.image" :alt="post.alt"> -->
         </div>

@@ -1,11 +1,11 @@
 <template>
-  <section>
+  <section class="block">
     <div class="main-info">
       <h2 class="h1-size">Υπηρεσίες</h2>
       <p>Η υγιεινή διατροφή μπορεί να ωφελήσει μικρούς και μεγάλους, υγιή άτομα καθώς και άτομα με ιατρικές παθήσεις. Όποιος κι αν είναι ο λόγος που βρίσκεστε εδώ, έχετε κάνει ήδη το πρώτο βήμα για αλλαγή.</p>
     </div>
     <div>
-      <template v-for="service in services" id="service.title">
+      <template v-for="service in services" :key="service.title">
         <LandingServiceCard :service="service" />
       </template>
     </div>
@@ -22,6 +22,7 @@ section {
   display: grid;
   gap: 2rem;
   width: 100%;
+  /* margin-block: 6rem; */
 }
 
 .main-info {
@@ -55,6 +56,18 @@ section {
       z-index: -1;
 
     }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main-info p {
+    &::after {
+        padding-block: 0rem;
+        top: -1rem;
+        right: -2rem;
+        width: 15rem;
+        height: 100%;
+    }  
   }
 }
 </style>

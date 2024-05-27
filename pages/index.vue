@@ -10,10 +10,22 @@
       <a href="mailto:mynutreatment@info.com">mynutreatment@info.com</a>
     </address> -->
     <HeroSection />
-    <AboutCard :data="data" :is-section="true" />
+    <address>
+      <a href="mailto:mynutreatment@info.com">mynutreatment@info.com</a>
+      <br>
+      <br>
+      <div>
+        <a href="tel:+30 6978312684">+30 6978312684</a>
+      </div>
+    </address>
+
+    <!-- <AboutCard :data="data" :is-section="true" />
+
     <LandingServices />
+
     <BlogPostShowcase :is-section="true" />
 
+    <LandingReviews /> -->
   </div>
 </template>
 

@@ -43,7 +43,7 @@
     --header-lg: 2.125rem;
     --header-lg-weight: 200;
     --header-md: 1.625rem;
-    --header-md-weight: 340;
+    --header-md-weight: 360;
     --header-sm: 1.225rem;
     --header-sm-weight: 200;
 
@@ -212,7 +212,7 @@ h1:not(.prose *, .blog-post *) {
 }
 
 .block {
-    margin-block: 8rem;
+    margin-block: 6rem;
 }
 
 .prose h2 {

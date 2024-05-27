@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <!-- <section>
     <header>
       <h1>Eat smarter, live better</h1>
     </header>
@@ -17,19 +17,22 @@
     <div class="author">
       <p>Ιωάννα Παπατζανή</p>
     </div>
-  </section>
-  <section>
+  </section> -->
+  <section style="margin-top: 4rem;">
     <header>
-      <h1 class="alt">Eat smarter, <span class="underlined">live better</span></h1>
+      <!-- <h1 class="alt">Eat smarter, <span class="underlined">live better</span></h1> -->
+      <h1 class="alt">Coming soon!</h1>
     </header>
     <!-- <div class="text"> -->
       <ContentRenderer :value="intro" class="text"/>
     <!-- </div> -->
     <div class="logo-container hero" >
-      <NuxtPicture src="/images/landing-page/hero.png" alt="mynutreatment"  width="520" height="480" sizes="sm:800" placeholder fit="cover" :modifiers="{ grayscale: true, tint: '#00DC82' }" />
+      <NuxtPicture src="/images/landing-page/hero.png" alt="mynutreatment"  width="520" height="480" sizes="sm:800" placeholder fit="cover"  />
     </div>
     <MainButton class="cta-button" size="large">
-      <NuxtLink to="/contact">{{ intro.buttonText }}
+      <!-- <NuxtLink to="/contact" > -->
+      <NuxtLink to="mailto:info@mynutreatment.com" >
+        <!-- {{ intro.buttonText }}  -->Κλείστε σύντομα ραντεβού 
       </NuxtLink>
     </MainButton>
     <div class="author">
