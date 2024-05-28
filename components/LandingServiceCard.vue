@@ -33,13 +33,11 @@ article {
   display: grid;
   grid-template-columns: 1fr .2fr 2fr;
   grid-template-rows: 5rem min-content;
-  /* margin-block: 4rem; */
+  margin-block: 4rem;
 
   &:nth-of-type(even) {
     grid-template-columns: 2.5fr .2fr 1fr;
     grid-template-rows: 15rem min-content;
-    margin-block: 1rem;
-    margin-bottom: 3rem;
 
     picture {
       grid-column: 2 / 4;
@@ -130,53 +128,16 @@ picture {
   article {
     grid-template-rows: 10rem 2rem min-content;
     margin-block: 2rem;
-
-    &:nth-of-type(even) {
-      grid-template-rows: 10rem 2rem min-content;
-      margin-block: 2rem;
-
-    picture {
-      grid-column: 1 / 4;
-      grid-row: 1 / 3;
-      max-height: 100%;
-      aspect-ratio: unset;
-
-      &::after {
-        background-color: var(--primary-yellow);
-        height: 60%;
-        width: 120%;
-        right: 6rem;
-        top: 13rem;
-        border-top-left-radius: var(--radius-md);
-        border-bottom-left-radius: var(--radius-sm);
-        border-bottom-right-radius: calc(var(--radius-lg) - 2rem);
-      }
-
-      &:deep(img) {
-        border-radius: var(--radius-sm);
-        border-bottom-right-radius: calc(var(--radius-lg) - 2rem);
-        /* height: 100%;
-        width: 100%;
-        border-radius: 50rem; */
-      }
-    }
-
-    .content {
-      grid-column: unset;
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-  } 
   }
   
-  .content, article:nth-of-type(even) .content {
+  .content {
     padding-left: 1rem;
     grid-column: 1 / 4;
     grid-row: 2 / 4;
 
   }
 
-  picture, article:nth-of-type(even) picture {
+  picture {
     /* max-height: 10rem; */
     grid-column: 1 / 4;
     grid-row: 1 / 3;
@@ -184,7 +145,7 @@ picture {
     &::after {
       top: unset;
       bottom: -0.75rem;
-      right: 3rem;
+      right: 5rem;
       width: 50%;
       border-bottom-left-radius: var(--radius-sm);
       border-bottom-right-radius: calc(var(--radius-lg) - 2rem);
@@ -192,7 +153,7 @@ picture {
 
     &:deep(img) {
       height: 100%;
-      width: 80%;
+      width: 70%;
       margin-inline: auto;
       border-bottom-right-radius: calc(var(--radius-lg) - 2rem);
     } 
