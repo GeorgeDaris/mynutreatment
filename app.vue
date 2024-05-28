@@ -1,6 +1,6 @@
 <template>
   <!-- <TestComp /> -->
-  <!-- <SiteHeader /> -->
+  <SiteHeader />
   <main>
     <NuxtPage />
   </main>
