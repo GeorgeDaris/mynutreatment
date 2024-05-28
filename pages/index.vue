@@ -9,7 +9,7 @@
     <address>
       <a href="mailto:mynutreatment@info.com">mynutreatment@info.com</a>
     </address> -->
-    <HeroSection />
+    <!-- <HeroSection /> -->
     <!-- <address>
       <a href="mailto:mynutreatment@info.com">mynutreatment@info.com</a>
       <br>
@@ -19,7 +19,7 @@
       </div>
     </address> -->
 
-    <!-- <AboutCard :data="data" :is-section="true" /> -->
+    <AboutCard :data="data" :is-section="true" />
 
     <!-- <LandingServices />
 
@@ -48,9 +48,9 @@ useSeoMeta({
 
 
 
-// const {data} = await useAsyncData('about', async () => {
-//     return await queryContent('main/landing-page/about').findOne();
-// })
+const {data} = await useAsyncData('about', async () => {
+    return await queryContent('main/landing-page/about').findOne();
+})
 
 </script>
 
