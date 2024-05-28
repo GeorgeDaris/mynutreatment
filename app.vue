@@ -1,11 +1,11 @@
 <template>
   <!-- <TestComp /> -->
-  <SiteHeader />
+  <!-- <SiteHeader /> -->
   <main>
     <NuxtPage />
   </main>
-  <FooterCTA />
-  <Footer />
+  <!-- <FooterCTA />
+  <Footer /> -->
 </template>
 <script setup lang="ts">
 useSeoMeta({

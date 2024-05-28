@@ -18,7 +18,7 @@
       <p>Ιωάννα Παπατζανή</p>
     </div>
   </section> -->
-  <section >
+  <section style="margin-top: 4rem;">
     <header>
       <!-- <h1 class="alt">Eat smarter, <span class="underlined">live better</span></h1> -->
       <h1 class="alt">Coming soon!</h1>
