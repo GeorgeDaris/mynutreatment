@@ -5,7 +5,7 @@
     <NuxtPage />
   </main>
   <!-- <FooterCTA /> -->
-  <SiteFooter />
+  <!-- <SiteFooter /> -->
 </template>
 <script setup lang="ts">
 useSeoMeta({
