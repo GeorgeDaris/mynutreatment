@@ -52,7 +52,7 @@ useSeoMeta({
 //     return await queryContent('main/landing-page/about').findOne();
 // })
 
-const data = await queryContent('main/landing-page/about').findOne();
+const data = await queryContent('main/1.landing-page/about').findOne();
 
 </script>
 
