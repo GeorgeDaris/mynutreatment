@@ -1,5 +1,5 @@
 <template>
-  <!-- <section>
+  <section>
     <header>
       <h1>Eat smarter, live better</h1>
     </header>
@@ -17,7 +17,7 @@
     <div class="author">
       <p>Ιωάννα Παπατζανή</p>
     </div>
-  </section> -->
+  </section>
   <section >
     <header>
       <!-- <h1 class="alt">Eat smarter, <span class="underlined">live better</span></h1> -->

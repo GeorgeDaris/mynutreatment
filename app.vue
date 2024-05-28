@@ -4,7 +4,7 @@
   <main>
     <NuxtPage />
   </main>
-  <!-- <FooterCTA /> -->
+  <FooterCTA />
   <SiteFooter />
 </template>
 <script setup lang="ts">
