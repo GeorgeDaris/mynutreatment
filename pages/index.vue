@@ -19,7 +19,7 @@
       </div>
     </address> -->
 
-    <AboutCard :data="data" :is-section="true" />
+    <!-- <AboutCard :data="data" :is-section="true" /> -->
 
     <!-- <LandingServices />
 
