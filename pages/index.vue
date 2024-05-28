@@ -52,8 +52,16 @@ useSeoMeta({
 //     return await queryContent('main/landing-page/about').findOne();
 // })
 
-const data = await queryContent('main/1.landing-page/about').findOne();
+let data = ref();
 
+onMounted(async () => {
+  try {
+    data.value = await queryContent('main/landing-page/about').findOne();
+  } catch (err) {
+    error.value = err;
+    console.error('Content query failed:', err);
+  }
+});
 </script>
 
 <style scoped>
