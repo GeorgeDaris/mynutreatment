@@ -32,7 +32,7 @@
     <MainButton class="cta-button" size="large">
       <!-- <NuxtLink to="/contact" > -->
       <NuxtLink to="mailto:info@mynutreatment.com" >
-        <!-- {{ intro.buttonText }}  -->Κλείστε σύντομα ραντεβού 
+        <!-- {{ intro.buttonText }}  -->Κλείστε ραντεβού 
       </NuxtLink>
     </MainButton>
     <div class="author">
@@ -55,6 +55,7 @@ section {
   gap: var(--gap);
   overflow-x: clip;
   margin-bottom: 8rem;
+  margin-top: 4rem; /*For the coming soon version*/
 
   header {
     grid-column: 1 / 4;
@@ -64,6 +65,12 @@ section {
     h1 {
       text-shadow: none;
       margin-bottom: -1rem;
+      filter: opacity(0);
+      animation-name: opacityfade;
+      animation-duration: 0.6s;
+      animation-fill-mode: forwards;
+      animation-delay: 2.5s;
+
 
       &.alt {
         margin-bottom: -1rem

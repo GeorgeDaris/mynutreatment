@@ -2,7 +2,7 @@
   <footer>
     <img src="../assets/icons/white-logo.svg" alt="logo" class="logo" width="200" height="200">
     <div class="container">
-      <div>
+      <!-- <div>
         <h3>Μάθετε περισσότερα</h3>
           <ul>
               <li>
@@ -18,7 +18,7 @@
                   <NuxtLink to="/contact">Επικοινωνια</NuxtLink>
               </li>
           </ul>
-      </div>
+      </div> -->
       <div>
         <h3>Επικοινωνια</h3>
         <ul>
@@ -31,7 +31,8 @@
         </ul>
         <!-- <a href="https://" target="_blank" rel="noopener noreferrer"></a> -->
       </div>
-      <img loading="lazy"src="../assets/icons/wheat-stems.svg" alt="wheat-stacks" class="wheat">
+      <img loading="lazy" src="../assets/icons/wheat-stems.svg"  alt="wheat-stacks" class="wheat">
+      <!-- <img loading="lazy" src="../assets/icons/wheat-stems.svg"  alt="wheat-stacks" class="wheat"> -->
     </div>
   </footer>
 </template>
@@ -102,6 +103,17 @@ footer:deep(a) {
 @media screen and (max-width: 767px) {
   footer {
     flex-direction: column;
+    justify-content: center
+  }
+
+  .logo {
+    /* padding-block: 2rem; */
+    border-right: 0rem;
+    border-bottom: .2rem solid var(--pure-white);
+  }
+
+  .wheat {
+    max-width: 13rem;
   }
 }
 </style>

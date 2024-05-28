@@ -1,11 +1,11 @@
 <template>
   <!-- <TestComp /> -->
-  <SiteHeader />
+  <!-- <SiteHeader /> -->
   <main>
     <NuxtPage />
   </main>
-  <FooterCTA />
-  <Footer />
+  <!-- <FooterCTA /> -->
+  <SiteFooter />
 </template>
 <script setup lang="ts">
 useSeoMeta({
@@ -109,6 +109,16 @@ useHead({
 
   to {
     transform: translateY(0rem);
+    filter: opacity(1);
+  }
+}
+
+@keyframes opacityfade {
+  from {
+    filter: opacity(0);
+  }
+
+  to {
     filter: opacity(1);
   }
 }

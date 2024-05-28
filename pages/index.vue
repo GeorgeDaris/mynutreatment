@@ -10,22 +10,22 @@
       <a href="mailto:mynutreatment@info.com">mynutreatment@info.com</a>
     </address> -->
     <HeroSection />
-    <address>
+    <!-- <address>
       <a href="mailto:mynutreatment@info.com">mynutreatment@info.com</a>
       <br>
       <br>
       <div>
         <a href="tel:+30 6978312684">+30 6978312684</a>
       </div>
-    </address>
+    </address> -->
 
     <AboutCard :data="data" :is-section="true" />
 
-    <LandingServices />
+    <!-- <LandingServices />
 
     <BlogPostShowcase :is-section="true" />
 
-    <LandingReviews />
+    <LandingReviews /> -->
   </div>
 </template>
 
@@ -33,12 +33,19 @@
 useSeoMeta({
   title: "mynutreatment",
   ogTitle: "mynutreatment",
-  description: "tba",
-  ogDescription: "tba",
-  ogImage: "/public/favicon.png",
+  description: "Ιωάννα Παπατζανή | Διατροφολόγος-Διαιτολόγος | Ηράκλειο Κρήτης. Υπηρεσίες Διατροφής: Διαχείριση Βάρους, Κλινική Διατροφή, Αλλαγή διατροφικών συνηθειών, Παιδική Παχυσαρκία, Συνεδρίες ΟΠΙΙΙΙΘ, Εξατομικευμένη προσέγγιση σύμφωνα με τις ανάγκες σας.",
+  ogDescription: "Ιωάννα Παπατζανή | Διατροφολόγος-Διαιτολόγος | Ηράκλειο Κρήτης. Υπηρεσίες Διατροφής: Διαχείριση Βάρους, Κλινική Διατροφή, Αλλαγή διατροφικών συνηθειών, Παιδική Παχυσαρκία, Συνεδρίες ΟΠΙΙΙΙΘ, Εξατομικευμένη προσέγγιση σύμφωνα με τις ανάγκες σας.",
+  ogImage: "/Hero.png",
   twitterCard: 'summary_large_image',
-  themeColor: "#C6DBC3"
+  themeColor: "#C6DBC3",
+  ogUrl: `https://www.mynutreatment.gr`,
+  twitterCard: 'summary_large_image',
+  twitterTitle: "mynutreatment",
+  twitterDescription: "Ιωάννα Παπατζανή | Διατροφολόγος-Διαιτολόγος | Ηράκλειο Κρήτης. Υπηρεσίες Διατροφής: Διαχείριση Βάρους, Κλινική Διατροφή, Αλλαγή διατροφικών συνηθειών, Παιδική Παχυσαρκία, Συνεδρίες ΟΠΙΙΙΙΘ, Εξατομικευμένη προσέγγιση σύμφωνα με τις ανάγκες σας.",
+  twitterImage: `/Hero.png`,
+  ogSiteName: "mynutreatment",
 })
+
 
 
 const {data} = await useAsyncData('about', async () => {
