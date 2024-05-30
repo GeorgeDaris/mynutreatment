@@ -24,7 +24,10 @@
       <h1 class="alt">Coming soon!</h1>
     </header>
     <!-- <div class="text"> -->
-      <ContentRenderer :value="intro" class="text"/>
+      <div class="text">
+        <p>Καλωσορίσατε στο mynutreatment</p>
+        <p>Ονομάζομαι Ιωάννα Παπατζανή είμαι πτυχιούχος Διατροφολόγος - Διαιτολόγος και παρέχω υπηρεσίες διατροφής με συνεδρίες δια ζώσης στο Ηράκλειο Κρήτης αλλά και μέσω διαδικτύου (online)  αναλαμβάνοντας την διατροφική σας υποστήριξη με εξατομικευμένα προγράμματα όπου και αν εσείς βρίσκεστε.</p>
+      </div>
     <!-- </div> -->
     <div class="logo-container hero" >
       <NuxtPicture src="/images/landing-page/hero.png" alt="mynutreatment"  width="520" height="480" sizes="sm:800" placeholder fit="cover"  />
@@ -36,13 +39,13 @@
       </NuxtLink>
     </MainButton>
     <div class="author">
-      <p>{{ intro.subheader }}</p>
+      <p>Διατροφική υποστήριξη</p>
     </div>
   </section>
 </template>
 
 <script lang="ts" setup>
-const intro = await queryContent('main/landing-page/intro').findOne();
+// const intro = await queryContent('main/landing-page/intro').findOne();
 </script>
 
 <style scoped>
