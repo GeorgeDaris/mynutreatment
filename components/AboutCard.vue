@@ -1,5 +1,5 @@
 <template>
-  <section :class="isSection ? 'block' : ''">
+  <section :class="isSection ? 'block' : ''" >
     <NuxtPicture :src="data.image" :alt="data.alt" width="480" height="556" sizes="sm:800" placeholder :loading="loading" fit="cover" class="profile-picture" />
     <div class="text">
         <h1 v-if="!isSection">{{ data.title }}</h1>
@@ -21,7 +21,6 @@ const props = defineProps<{
     description: string,
     image: string,
     alt: string
-    _path: string
   },
   isSection?: boolean
 }>()

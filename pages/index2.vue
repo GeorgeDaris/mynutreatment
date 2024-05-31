@@ -10,7 +10,7 @@
       <a href="mailto:mynutreatment@info.com">mynutreatment@info.com</a>
     </address> -->
     <!-- <HeroSection /> -->
-    <HeroSectionComingSoon />
+    <HeroSection />
     <!-- <address>
       <a href="mailto:mynutreatment@info.com">mynutreatment@info.com</a>
       <br>
@@ -20,17 +20,17 @@
       </div>
     </address> -->
 
-    <!-- <AboutCard :data="data" :is-section="true" /> -->
+    <AboutCard :data="data" :is-section="true" />
     <!-- <ClientOnly >
       <AboutCard :data="data" :is-section="true" />
     </ClientOnly> -->
-    <AboutCardComingSoon :is-section="true" />
+    <!-- <AboutCardComingSoon :is-section="true" /> -->
 
-    <!-- <LandingServices />
+    <LandingServices />
 
     <BlogPostShowcase :is-section="true" />
 
-    <LandingReviews /> -->
+    <LandingReviews />
   </div>
 </template>
 
@@ -53,9 +53,9 @@ useSeoMeta({
 
 
 
-// const {data} = await useAsyncData('about', async () => {
-//     return await queryContent('main/landing-page/about').findOne();
-// })
+const {data} = await useAsyncData('about', async () => {
+    return await queryContent('main/landing-page/about').findOne();
+})
 
 // let data = ref();
 

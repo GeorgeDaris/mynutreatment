@@ -31,7 +31,7 @@
         </ul>
         <!-- <a href="https://" target="_blank" rel="noopener noreferrer"></a> -->
       </div>
-      <img loading="lazy" src="../assets/icons/wheat-stems.svg"  alt="wheat-stacks" class="wheat">
+      <img src="../assets/icons/wheat-stems.svg"  alt="wheat-stacks" class="wheat">
       <!-- <img loading="lazy" src="../assets/icons/wheat-stems.svg"  alt="wheat-stacks" class="wheat"> -->
     </div>
   </footer>
