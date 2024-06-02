@@ -1,38 +1,16 @@
 <template>
-  <!-- <section>
-    <header>
-      <h1>Eat smarter, live better</h1>
-    </header>
-    <div class="text">
-      <p>Καλωσορίσατε στο mynutreatment!</p>
-      <p>Ονομάζομαι Ιωάννα Παπατζανή και είμαι πτυχιούχος Διατροφολόγος, του τμήματος Διατροφής και Διαιτολογίας του Αλεξάνδρειου Τεχνολογικού Εκπαιδευτικού Ιδρύματος Θεσσαλονίκης.</p>
-    </div>
-    <div class="logo-container" >
-      <NuxtPicture src="/images/logo-no-text.svg" alt="mynutreatment"  width="250" height="250" sizes="sm:800" placeholder fit="cover" />
-    </div>
-    <MainButton class="cta-button" size="large">
-      <NuxtLink to="/contact">Κλείστε ραντεβού
-      </NuxtLink>
-    </MainButton>
-    <div class="author">
-      <p>Ιωάννα Παπατζανή</p>
-    </div>
-  </section> -->
   <section >
     <header>
-      <!-- <h1 class="alt">Eat smarter, <span class="underlined">live better</span></h1> -->
-      <h1 class="alt">Coming soon!</h1>
+      <h1 class="alt">Eat smarter, <span class="underlined">live better</span></h1>
     </header>
-    <!-- <div class="text"> -->
       <ContentRenderer :value="intro" class="text"/>
-    <!-- </div> -->
     <div class="logo-container hero" >
       <NuxtPicture src="/images/landing-page/hero.png" alt="mynutreatment"  width="520" height="480" sizes="sm:800" placeholder fit="cover"  />
     </div>
     <MainButton class="cta-button" size="large">
-      <!-- <NuxtLink to="/contact" > -->
-      <NuxtLink to="mailto:info@mynutreatment.com" >
-        <!-- {{ intro.buttonText }}  -->Κλείστε ραντεβού 
+      <NuxtLink to="/contact" >
+      <!-- <NuxtLink to="mailto:info@mynutreatment.com" > -->
+        {{ intro.buttonText }}  
       </NuxtLink>
     </MainButton>
     <div class="author">

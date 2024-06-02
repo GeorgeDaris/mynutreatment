@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article class="review-card">
     <div class="icons">
       <img src="../assets/icons/google-icon.png" alt="google icon" width="35" heigh="35" class="google-icon">
       <div class="stars">
@@ -30,6 +30,57 @@ const props = defineProps<{
     link: string,
   }
 }>()
+
+const {$gsap, $ScrollTrigger} = useNuxtApp()
+
+onMounted(() => {
+    // create
+// let mm = $gsap.matchMedia();
+
+// add a media query. When it matches, the associated function will run
+    // mm.add("(min-width: 760px)", () => {
+// const reviews: HTMLElement[] = $gsap.utils.toArray('.review-card')
+
+// reviews.forEach((review, index) => {
+//   $gsap.to(review, { 
+//     opacity: 1,
+//     x: 0,
+//     backgroundColor: 'red',
+//     startAt: {
+//       opacity: 0,
+//       x: 200,
+//       backgroundColor: 'blue'
+//     },
+//     duration: 0 ,
+//     delay: 0,
+//     scrollTrigger: {
+//       trigger: review,
+//       start: "-70px center",
+//       end: '50% center',
+//       scrub: 2,
+//       toggleActions: "play none none none",
+//       markers: true
+//     }
+//   })
+// })
+
+  // $gsap.to('.review-card', { 
+  //   opacity: 1,
+  //   startAt: {
+  //     opacity: 0
+  //   },
+  //   duration: 0 ,
+  //   delay: 0,
+  //   scrollTrigger: {
+  //     trigger: '.review-card',
+  //     start: "-70px center",
+  //     end: '50% center',
+  //     // scrub: 2,
+  //     markers: true
+  //   }
+  // })
+    
+})
 </script>
 
 <style scoped>
@@ -42,7 +93,7 @@ article {
   border-radius: var(--radius-sm);
   width: 25rem;
   /* for mobile devices */
-  max-width: 70vw; 
+  max-width: 80vw; 
   height: 35rem;
   /* overflow-y: auto;
   scrollbar-width: thin; */

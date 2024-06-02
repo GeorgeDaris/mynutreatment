@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article id="service-card">
     <NuxtPicture :src="service.image" :alt="service.alt" width="440" height="480" sizes="sm:800" placeholder fit="cover" loading="lazy" />
 
     <div class="content">
@@ -8,7 +8,7 @@
       </header>
       <p class="truncated-text">{{ service.description }}</p>
       <MainButton class="link">
-        <NuxtLink to="">Μάθετε περισσότερα</NuxtLink>
+        <NuxtLink to="/services#category">Μάθετε περισσότερα</NuxtLink>
       </MainButton>
     </div>
   </article>
@@ -26,6 +26,41 @@ const props = defineProps<{
     alt: string
   }
 }>()
+
+const {$gsap, $ScrollTrigger} = useNuxtApp()
+
+onMounted(() => {
+    // create
+// let mm = $gsap.matchMedia();
+
+// add a media query. When it matches, the associated function will run
+    // mm.add("(min-width: 760px)", () => {
+const sections: HTMLElement[] = $gsap.utils.toArray('#service-card')
+
+sections.forEach((section, index) => {
+  const isEven = index % 2 === 0;
+  $gsap.to(section, { 
+    rotation: 0,
+    x: 0, 
+    opacity: 1,
+    startAt: {
+      x: isEven ? -200 : 200, 
+      opacity: 0
+    },
+    duration: 2 ,
+    delay: 2,
+    scrollTrigger: {
+      trigger: section,
+      start: "-150px center",
+      end: '50% center',
+      scrub: 2,
+      toggleActions: "play none none none",
+      // markers: true
+    }
+  })
+})
+    
+})
 </script>
 
 <style scoped>
@@ -67,6 +102,11 @@ article {
       grid-column: 1 / 3;
       padding-left: 1rem;
       padding-right: 6rem;
+    }
+
+    .truncated-text {
+      max-width: 97%; 
+      /* keeping the last card at least 4 lines long*/
     }
   } 
 }

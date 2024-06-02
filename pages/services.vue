@@ -28,12 +28,12 @@
           <NuxtLink to="/contact">Κλείσε ραντεβού</NuxtLink>
         </MainButton>
       </div>
-      <NuxtPicture src="/images/services/online-meeting.jpg" width="525" height="400"  sizes="sm:500" loading="lazy"/>
+      <NuxtPicture src="/images/services/online-meeting.jpg" width="525" height="400"  sizes="sm:500" loading="lazy" id="online"/>
 
 
     </section>
     <section class="services-grid">
-      <h2>Υπηρεσίες</h2>
+      <h2 id="categories">Υπηρεσίες</h2>
       <template v-for="category in data">
         <ServiceCategory :category="category">
           <!-- <template v-for="">
@@ -52,6 +52,56 @@ const {data} = await useAsyncData('categories', async () => {
     const categories = await queryContent('main/services/categories').where({category: {$exists: true}}).find();
 
     return categories
+})
+
+const {$gsap, $ScrollTrigger} = useNuxtApp()
+
+onMounted(() => {
+    // create
+// let mm = $gsap.matchMedia();
+
+// add a media query. When it matches, the associated function will run
+    // mm.add("(min-width: 760px)", () => {
+      $gsap.to('.measure-para', { 
+        rotation: 0,
+        x: 0, 
+        opacity: 1,
+        startAt: {
+          x: -200, 
+          opacity: 0
+        },
+        duration: 2 ,
+        delay: 2,
+        scrollTrigger: {
+          trigger: '.measure-para',
+          start: "-300px center",
+          end: '100% center',
+          scrub: 2,
+        //   markers: true
+        }
+      })
+
+      $gsap.to('#online', { 
+        rotation: 0,
+        x: 0, 
+        opacity: 1,
+        scale: 1,
+        startAt: {
+          x: 100, 
+          opacity: 0,
+          rotation: 10,
+          scale: 0.8
+        },
+        duration: 2 ,
+        delay: 2,
+        scrollTrigger: {
+          trigger: '#online',
+          start: "-50px center",
+          end: '50% center',
+          scrub: 2,
+        //   markers: true
+        }
+      })
 })
 </script>
 

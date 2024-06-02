@@ -7,11 +7,19 @@ export default defineNuxtConfig({
       'postcss-nested': {}
     }
   },
-  modules: ['@nuxt/content', "@nuxt/image"],
+  modules: ['@nuxt/content', "@nuxt/image", "@hypernym/nuxt-gsap"],
   image: {
     // dir: 'assets/images',
     // provider: 'IPX',
     format: ['avif', 'webp', 'png']
+  },
+  // "@hypernym/nuxt-gsap"
+  gsap: {
+    composables: true,
+    extraPlugins: {
+      scrollTrigger: true,
+      scrollTo: true
+    }
   },
   // content: {
     

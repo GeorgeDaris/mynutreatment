@@ -22,7 +22,7 @@ section {
   grid-template-columns: auto auto;
   align-items: center;
   padding: 1rem;
-  margin-top: 6rem;
+  margin-top: 4rem;
 }
 
 picture {
@@ -60,12 +60,32 @@ h2 {
   section {
     grid-template-columns: 1fr;
     justify-items: center;
+    /* width: 100vw; */
+    /* text-align: center; */
+    padding: unset;
+  }
+
+  h2 {
+    /* text-align: justify; */
+    font-size: calc(var(--header-xl) - 0.7rem);
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: .1rem;
+    -webkit-text-stroke: .08rem var(--dark-blue);
+  }
+
+  .text {
+    align-self: start;
   }
 
   picture {
     justify-self: center;
     margin-right: 0rem;
     /* order: 2; */
+
+    &:deep(img) {
+      object-fit: contain;
+    }
   }
 }
 

@@ -1,7 +1,7 @@
 <template>
-  <section :class="isSection ? 'block' : ''" >
+  <section id="box" :class="isSection ? 'block' : ''" >
     <NuxtPicture :src="data.image" :alt="data.alt" width="480" height="556" sizes="sm:800" placeholder :loading="loading" fit="cover" class="profile-picture" />
-    <div class="text">
+    <div class="text" id="text">
         <h1 v-if="!isSection">{{ data.title }}</h1>
         <h2 v-else class="h1-size">{{ data.title }}</h2>
         <div class="prose">
@@ -27,6 +27,56 @@ const props = defineProps<{
 
 const loading = await props.isSection ? 'lazy' : 'eager';
 
+const {$gsap, $ScrollTrigger} = useNuxtApp()
+
+onMounted(() => {
+    // create
+let mm = $gsap.matchMedia();
+
+// add a media query. When it matches, the associated function will run
+    mm.add("(min-width: 760px)", () => {
+        $gsap.to('#text', { 
+        rotation: 0,
+        x: '-5rem',
+        y: '8rem', 
+        opacity: 1,
+        startAt: {
+          x: 200,
+          y: '8rem', 
+          opacity: 0
+        },
+        duration: 1 ,
+        scrollTrigger: {
+          trigger: '#text',
+          start: "-300px center",
+          end: '50% center',
+          scrub: 2,
+        //   markers: true
+        }
+      })
+
+      $gsap.to('.profile-picture', { 
+        rotation: 0,
+        x: 0, 
+        opacity: 1,
+        startAt: {
+          x: -200, 
+          opacity: 0
+        },
+        duration: 2 ,
+        delay: 2,
+        scrollTrigger: {
+          trigger: '.profile-picture',
+          start: "70px center",
+          end: '50% center',
+          scrub: 2,
+        //   markers: true
+        }
+      })
+    });
+    
+})
+
 </script>
 
 <style scoped>
@@ -40,7 +90,7 @@ section {
     overflow-x: clip;
 
     .text {
-        transform: translateX(-5rem) translateY(8rem);
+        /* transform: translateX(-5rem) translateY(8rem); */
         width: 112%;
         height: fit-content;
         grid-row: 1 / 3;
@@ -55,11 +105,12 @@ section {
         border-radius: var(--radius-sm);
         /* border-bottom-left-radius: var(--radius-sm);
         border-top-left-radius: var(--radius-sm); */
-        animation-name: slidefromrightabout;
+        /* animation-name: slidefromrightabout;
         animation-duration: 0.6s;
         animation-fill-mode: forwards;
-        animation-delay: 0.5s;
-        filter: opacity(0);
+        animation-delay: 0.5s;*/
+        /* filter: opacity(0);  */
+        opacity: 0; 
         
 
         h1, h2 {
@@ -79,11 +130,12 @@ section {
             1.3rem 0rem 0px -0.5rem var(--shadow-color-3),
             1.3rem 0rem 2px -0.5rem var(--shadow-color-1);
         z-index: 3;
-        animation-name: slidefromleft;
+        /* animation-name: slidefromleft;
         animation-duration: 0.6s;
         animation-fill-mode: forwards;
-        animation-delay: 0.1s;
-        filter: opacity(0);
+        animation-delay: 0.1s;*/
+        /* filter: opacity(0);  */
+        opacity: 0; 
 
         &:deep(img) {
             width: 100%;
@@ -108,6 +160,7 @@ section {
             /* bottom: -2rem; */
             animation: none;
             filter: unset;
+            opacity: 1;
 
             &:deep(img) {
                 max-height: 27rem;
@@ -130,6 +183,7 @@ section {
             padding-right: 2rem;
             animation: none;
             filter: unset;
+            opacity: 1;
 
 
             h1 {

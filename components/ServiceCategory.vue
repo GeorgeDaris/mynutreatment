@@ -28,27 +28,39 @@ const contentFiles = await queryContent(`${props.category._path}`)
     .where({category: {$exists: false}})
     .find();
 
-// files = contentFiles.map(file => ({
-//     title: file.title,
-//     icon: file.icon,
-//     content: file.body
-//   }));
+    const {$gsap, $ScrollTrigger} = useNuxtApp()
 
-//     .where({ _path: { $ne: `${props.category.path}/index.md` } })
-//     .find();
+onMounted(() => {
+    // create
+// let mm = $gsap.matchMedia();
 
+// add a media query. When it matches, the associated function will run
+    // mm.add("(min-width: 760px)", () => {
+const sections: HTMLElement[] = $gsap.utils.toArray('.service-wrapper')
 
-// let files = ref();
-
-//   const contentFiles = await queryContent(`${props.category.path}`)
-//     .where({ _path: { $ne: `${props.category.path}/index.md` } })
-//     .find();
-  
-//   files.value = contentFiles.map(file => ({
-//     title: file.title,
-//     icon: file.icon,
-//     content: file.body
-//   }));
+sections.forEach((section, index) => {
+  const isEven = index % 2 === 0;
+  $gsap.to(section, { 
+    rotation: 0,
+    x: 0, 
+    opacity: 1,
+    startAt: {
+      x: isEven ? -200 : 200, 
+      opacity: 0
+    },
+    duration: 2 ,
+    delay: 2,
+    scrollTrigger: {
+      trigger: section,
+      start: "-200px center",
+      end: '20% center',
+      scrub: 2,
+      toggleActions: "play none none none",
+    }
+  })
+})
+    
+})
 </script>
 
 <style scoped>

@@ -110,6 +110,10 @@ const props = defineProps<{
 @media screen and (max-width: 767px) {
   .blog-card {
     max-width: unset;
+
+    &:deep(img) {
+      max-height: 22rem;
+    }
   }
 }
 

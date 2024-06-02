@@ -56,7 +56,7 @@ footer {
   gap: 2rem;
   overflow-x: clip;
   margin-inline: auto;
-  margin-top: 4rem;
+  margin-top: 10rem;
   max-width: calc(var(--max-width) + 8rem);
 }
 
@@ -103,7 +103,8 @@ footer:deep(a) {
 @media screen and (max-width: 767px) {
   footer {
     flex-direction: column;
-    justify-content: center
+    justify-content: center;
+    text-align: center;
   }
 
   .logo {
