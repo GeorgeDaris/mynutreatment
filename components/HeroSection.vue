@@ -1,7 +1,7 @@
 <template>
   <section >
     <header>
-      <h1 class="alt">Eat smarter, <span class="underlined">live better</span></h1>
+      <h1 class="alt">{{intro.title}} <span class="caligraphic">{{ intro.caligraphic }}</span></h1>
     </header>
       <ContentRenderer :value="intro" class="text"/>
     <div class="logo-container hero" >

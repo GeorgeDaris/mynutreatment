@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 :root {
     font-size: 16px;
@@ -260,9 +261,13 @@ p {
         right: 0;
         width: 100%;
         height: 1.6rem;
-        background-image: linear-gradient(to right, transparent 20%, var(--pure-white));
+        background-image: linear-gradient(to right, transparent 20%, var(--pure-white)), linear-gradient(to top, transparent 80%, var(--pure-white));
         pointer-events: none;
     }
+}
+
+.caligraphic {
+    font-family: 'Dancing Script', cursive;
 }
 
 /* Prose related */

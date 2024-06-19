@@ -59,7 +59,7 @@ const props = defineProps<{
   &:deep(img) {
     height: 100%;
     width: 100%;
-    max-height: 18rem;
+    max-height: 19.5rem;
     object-fit: cover;
     object-position: center;
   }

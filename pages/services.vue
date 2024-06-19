@@ -34,13 +34,10 @@
     </section>
     <section class="services-grid">
       <h2 id="categories">Υπηρεσίες</h2>
-      <template v-for="category in data">
-        <ServiceCategory :category="category">
-          <!-- <template v-for="">
-          
-          </template> -->
-        </ServiceCategory>
-      </template>
+      <!-- <template v-for="category in data"> -->
+        <ServiceList :category="data">
+        </ServiceList>
+      <!-- </template> -->
 
     </section>
     
@@ -48,6 +45,12 @@
 </template>
 
 <script lang="ts" setup>
+// const {data} = await useAsyncData('categories', async () => {
+//     const categories = await queryContent('main/services/categories').where({category: {$exists: true}}).find();
+
+//     return categories
+// })
+
 const {data} = await useAsyncData('categories', async () => {
     const categories = await queryContent('main/services/categories').where({category: {$exists: true}}).find();
 

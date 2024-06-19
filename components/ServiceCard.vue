@@ -1,6 +1,7 @@
 <template>
     <div class="service-card">
         <h4>{{service.title}}</h4>
+        <p v-if="service.subheader" class="sub">{{ service.subheader }}</p>
         <div class="icon-wrapper">
             <NuxtImg :src="service.icon" alt="" aria-hidden="true"/>
         </div>
@@ -60,9 +61,14 @@ const props = defineProps(['service'])
 }
 
 h4 {
-      margin-block: 1rem;
-      /* preventing the icon from hiding the text */
-      margin-right: 8rem;
-      font-weight: normal;
-    }
+    margin-block: 1rem;
+    /* preventing the icon from hiding the text */
+    margin-right: 8rem;
+    font-weight: normal;
+}
+
+.sub {
+    margin-bottom: 1rem;
+    margin-top: -0.5rem;
+}
 </style>

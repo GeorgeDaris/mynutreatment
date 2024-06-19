@@ -24,7 +24,7 @@ const props = defineProps<{
 
 // let files; 
 
-const contentFiles = await queryContent(`${props.category._path}`)
+const contentFiles = await queryContent('/main/services/categories')
     .where({category: {$exists: false}})
     .find();
 
@@ -94,21 +94,21 @@ sections.forEach((section, index) => {
   }
 }
 
-.service-container:deep(:nth-of-type(even)) {
+.service-container:deep(:nth-of-type(1n+1)) {
   .icon-wrapper {
     background-color: var(--primary-yellow);
   }
 }
 
-.service-container:deep(:nth-of-type(3)) {
+.service-container:deep(:nth-of-type(3n+1)) {
   .icon-wrapper {
-    background-color: var(--primary-green);
+    background-color: var(--primary-red);
   }
 }
 
-.service-container:deep(:nth-of-type(4)) {
+.service-container:deep(:nth-of-type(3n)) {
   .icon-wrapper {
-    background-color: var(--primary-red);
+    background-color: var(--primary-green);
   }
 }
 </style>
