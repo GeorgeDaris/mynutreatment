@@ -59,6 +59,32 @@ sections.forEach((section, index) => {
       markers: true
     }
   })
+
+  let mm = $gsap.matchMedia();
+
+// add a media query. When it matches, the associated function will run
+    mm.add("(max-width: 760px)", () => {
+      $gsap.to(section, { 
+        rotation: 0,
+        x: 0, 
+        opacity: 1,
+        startAt: {
+          x: isEven ? -200 : 200, 
+          opacity: 0
+        },
+        duration: 2 ,
+        delay: 2,
+        scrollTrigger: {
+          trigger: section,
+          start: "-100% center",
+          end: '-30% center',
+          scrub: 2,
+          // once: true,
+          toggleActions: "play none none none",
+          markers: true
+        }
+      })
+    })
 })
     
 })
