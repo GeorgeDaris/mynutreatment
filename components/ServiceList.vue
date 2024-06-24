@@ -76,7 +76,7 @@ sections.forEach((section, index) => {
         delay: 2,
         scrollTrigger: {
           trigger: section,
-          start: "-100% center",
+          start: "-100px center",
           end: '30px center',
           scrub: 2,
           once: true,

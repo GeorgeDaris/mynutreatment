@@ -144,11 +144,11 @@ onMounted(() => {
           scale: 0.8
         },
         duration: 2 ,
-        delay: 2,
+        delay: 2, 
         scrollTrigger: {
           trigger: '#online',
-          start: "-100% center",
-          end: '-20% center',
+          start: "-140% center",
+          end: '-30% center',
           scrub: 2,
           once: true
         //   markers: true
