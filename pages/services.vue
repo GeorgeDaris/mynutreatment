@@ -80,6 +80,7 @@ onMounted(() => {
           start: "-300px center",
           end: '100% center',
           scrub: 2,
+          once: true
         //   markers: true
         }
       })
@@ -102,9 +103,59 @@ onMounted(() => {
           start: "-50px center",
           end: '50% center',
           scrub: 2,
+          once: true
         //   markers: true
         }
       })
+
+      let mm = $gsap.matchMedia();
+
+// add a media query. When it matches, the associated function will run
+    mm.add("(max-width: 760px)", () => {
+      $gsap.to('.measure-para', { 
+        rotation: 0,
+        x: 0, 
+        opacity: 1,
+        startAt: {
+          x: -200, 
+          opacity: 0
+        },
+        duration: 2 ,
+        delay: 2,
+        scrollTrigger: {
+          trigger: '.measure-para',
+          start: "-80% center",
+          end: '-30% center',
+          scrub: 2,
+          once: true
+        //   markers: true
+        }
+      })
+
+      $gsap.to('#online', { 
+        rotation: 0,
+        x: 0, 
+        opacity: 1,
+        scale: 1,
+        startAt: {
+          x: 100, 
+          opacity: 0,
+          rotation: 10,
+          scale: 0.8
+        },
+        duration: 2 ,
+        delay: 2,
+        scrollTrigger: {
+          trigger: '#online',
+          start: "-50% center",
+          end: '-20% center',
+          scrub: 2,
+          once: true
+        //   markers: true
+        }
+      })
+    })
+      
 })
 </script>
 

@@ -16,23 +16,49 @@ const {$gsap, $ScrollTrigger} = useNuxtApp()
 
 onMounted(() => {
   $gsap.to('.reviews', { 
-          rotation: 0,
-          x: 0, 
-          opacity: 1,
-          startAt: {
-            x: 20, 
-            opacity: 0
-          },
-          duration: 2 ,
-          delay: 2,
-          scrollTrigger: {
-            trigger: '.reviews',
-            start: "-150px center",
-            end: '50% center',
-            scrub: 2,
-            // markers: true
-          }
-        })
+      rotation: 0,
+      x: 0, 
+      opacity: 1,
+      startAt: {
+        x: 20, 
+        opacity: 0
+      },
+      duration: 2 ,
+      delay: 2,
+      scrollTrigger: {
+        trigger: '.reviews',
+        start: "-150px center",
+        end: '50% center',
+        scrub: 2,
+        once: true
+        // markers: true
+      }
+    })
+
+    let mm = $gsap.matchMedia();
+
+// add a media query. When it matches, the associated function will run
+    mm.add("(max-width: 760px)", () => {
+      $gsap.to('.reviews', { 
+        rotation: 0,
+        x: 0, 
+        opacity: 1,
+        startAt: {
+          x: 20, 
+          opacity: 0
+        },
+        duration: 2 ,
+        delay: 2,
+        scrollTrigger: {
+          trigger: '.reviews',
+          start: "-100 center",
+          end: '-30% center',
+          scrub: 2,
+          once: true
+          // markers: true
+        }
+      })
+    })
 })
 </script>
 

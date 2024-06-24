@@ -54,9 +54,8 @@ sections.forEach((section, index) => {
       start: "-80% center",
       end: '30% center',
       scrub: 2,
-      // once: true,
+      once: true,
       toggleActions: "play none none none",
-      markers: true
     }
   })
 
@@ -79,9 +78,8 @@ sections.forEach((section, index) => {
           start: "-100% center",
           end: '-30% center',
           scrub: 2,
-          // once: true,
+          once: true,
           toggleActions: "play none none none",
-          markers: true
         }
       })
     })
