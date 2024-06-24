@@ -124,7 +124,7 @@ onMounted(() => {
         delay: 2,
         scrollTrigger: {
           trigger: '.measure-para',
-          start: "-80% center",
+          start: "-100% center",
           end: '-30% center',
           scrub: 2,
           once: true
@@ -147,7 +147,7 @@ onMounted(() => {
         delay: 2,
         scrollTrigger: {
           trigger: '#online',
-          start: "-50% center",
+          start: "-100% center",
           end: '-20% center',
           scrub: 2,
           once: true
