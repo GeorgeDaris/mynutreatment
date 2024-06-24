@@ -51,8 +51,8 @@ sections.forEach((section, index) => {
     delay: 2,
     scrollTrigger: {
       trigger: section,
-      start: "-100% center",
-      end: '50% center',
+      start: "-80% center",
+      end: '30% center',
       scrub: 2,
       // once: true,
       toggleActions: "play none none none",
