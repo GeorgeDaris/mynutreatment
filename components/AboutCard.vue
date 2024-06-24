@@ -51,6 +51,7 @@ let mm = $gsap.matchMedia();
           start: "-300px center",
           end: '50% center',
           scrub: 2,
+          once: true
         //   markers: true
         }
       })
@@ -70,6 +71,8 @@ let mm = $gsap.matchMedia();
           start: "70px center",
           end: '50% center',
           scrub: 2,
+          once: true
+
         //   markers: true
         }
       })

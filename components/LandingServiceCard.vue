@@ -52,10 +52,11 @@ sections.forEach((section, index) => {
     scrollTrigger: {
       trigger: section,
       start: "-150px center",
-      end: '50% center',
+      end: '30vh center',
       scrub: 2,
+      once: true,
       toggleActions: "play none none none",
-      // markers: true
+      markers: true
     }
   })
 })

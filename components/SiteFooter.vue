@@ -23,10 +23,20 @@
         <h3>Επικοινωνια</h3>
         <ul>
           <li>
-            <a href="tel:+30 6978312684">+30 6978312684</a>
+            <img src="/assets/icons/Call.svg" alt="">
+            <a :href="`tel:${data.phone}`">{{ data.phone }}</a>
           </li>
           <li>
-            <a href="mailto:info@mynutreatment.com">info@mynutreatment.com</a>
+            <img src="/assets/icons/Paper-Plane.svg" alt="">
+            <a :href="`mailto:${data.email}`">{{data.email}}</a>
+          </li>
+          <li>
+            <img src="/assets/icons/Facebook.svg" alt="">
+            <a :href="data.facebook" target="_blank">Ιωάννα Παπατζανή </a>
+          </li>
+          <li>
+            <img src="/assets/icons/Instagram.svg" alt="">
+            <a :href="data.instagram" target="_blank">mynutreatment</a>
           </li>
         </ul>
         <!-- <a href="https://" target="_blank" rel="noopener noreferrer"></a> -->
@@ -38,7 +48,9 @@
 </template>
 
 <script lang="ts" setup>
-
+const {data} = await useAsyncData('contact', async () => {
+    return await queryContent('main/contact/contact').findOne();
+})
 </script>
 
 <style scoped>
@@ -77,6 +89,9 @@ ul {
   li {
     list-style-type: none;
     margin-block: .5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center
   }
 } 
 
@@ -105,6 +120,11 @@ footer:deep(a) {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+
+    /* ul {
+      display: grid;
+      justify-items: center;
+    } */
   }
 
   .logo {

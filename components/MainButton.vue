@@ -55,7 +55,7 @@ const props = defineProps({
     font-size: larger;
   }
 
-  &:deep(a, button) {
+  &:deep(a), &:deep(button) {
     text-decoration: none;
     color: inherit;
     display: inline-block;
