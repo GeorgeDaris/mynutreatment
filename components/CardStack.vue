@@ -3,9 +3,9 @@
         <!-- <div class="card"></div>
         <div class="card"></div>
         <div class="card"></div> -->
-        <NuxtPicture src="/images/services/slideshow/scale.jpeg" alt="post.alt"  width="400" height="200" sizes="sm:800" placeholder fit="cover" class="card" />
         <NuxtPicture src="images/services/slideshow/composition.jpeg" alt="post.alt"  width="400" height="200" sizes="sm:800" placeholder fit="cover" class="card"/>
-        <NuxtPicture src="images/services/slideshow/stack.jpeg" alt="post.alt"  width="400" height="200" sizes="sm:800" placeholder fit="cover" class="card"/>
+        <NuxtPicture src="/images/services/slideshow/scale.jpeg" alt="post.alt"  width="400" height="200" sizes="sm:800" placeholder fit="cover" class="card" />
+        <NuxtPicture src="images/services/slideshow/slideshow.jpg" alt="post.alt"  width="400" height="200" sizes="sm:800" placeholder fit="cover" class="card"/>
       </div>
 </template>
 

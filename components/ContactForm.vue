@@ -1,50 +1,66 @@
 <template>
-  <form @submit.prevent="">
+  <form @submit.prevent="submitForm(form)">
     <h2>Επικοινωνία</h2>
     <label>
       <span>
         Όνομα
       </span>
-      <input type="text" required>
+      <input type="text" required v-model="form.name">
     </label>
     <label>
       <span>
         Επώνυμο
       </span>
-      <input type="email" required>
+      <input type="email" required v-model="form.lastName">
     </label>
     <label>
       <span>
         Email
       </span>
-      <input type="email" required>
+      <input type="email" required v-model="form.email">
     </label>
     <label>
       <span>
         Τηλέφωνο
       </span>
-      <input type="phone">
+      <input type="tel" v-model="form.phoneNumber">
     </label>
     <label>
       <span>
         Μύνημα
       </span>
-      <textarea required></textarea>
+      <textarea required v-model="form.message"></textarea>
     </label>
 
     <MainButton class="btn-wrapper">
       <button type="submit">
-        Αποστολή
+        <p v-if="sending">Περιμένετε</p> 
+        <p v-if="!sending">Αποστολή</p> 
       </button>
     </MainButton>
 
-    <p></p>
+    <!-- <pre>
+      {{ form }}
+    </pre> -->
   </form>
 </template>
 
 <script setup>
+const form = reactive({
+  name: "",
+  lastName: "",
+  email: "",
+  phoneNumber: "",
+  message: ""
+})
 
+let sending = ref(false)
+let error = ref(false)
+let success = ref(false)
 
+const submitForm = (() => {
+  
+})
 </script>
 
 <style scoped>
@@ -60,6 +76,7 @@ form {
   padding: 2rem;
   border: var(--card-border);
   border-radius: var(--radius-sm);
+  border-top-left-radius: var(--radius-md);
 
   position: relative;
   top: -6rem;
@@ -71,6 +88,12 @@ form {
   label {
     width: 100%;
     font-size: larger;
+
+    &:has(input:required, textarea:required) {
+      span::after {
+        content: "*"
+      }
+    }
 
     input, textarea {
       width: 100%;

@@ -10,7 +10,7 @@
 
     <LandingReviews />
 
-    <FooterCTA />
+    <!-- <FooterCTA /> -->
 
     <!-- <div id="box">this is a test</div> -->
   </div>

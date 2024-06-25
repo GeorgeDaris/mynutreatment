@@ -33,7 +33,8 @@ section {
   gap: var(--gap);
   overflow-x: clip;
   margin-bottom: 8rem;
-  margin-top: 4rem; /*For the coming soon version*/
+  /* margin-top: 4rem;  */
+  /*For the coming soon version*/
 
   header {
     grid-column: 1 / 4;

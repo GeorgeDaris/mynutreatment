@@ -32,7 +32,7 @@
           </li>
           <li>
             <img src="/assets/icons/Facebook.svg" alt="">
-            <a :href="data.facebook" target="_blank">Ιωάννα Παπατζανή </a>
+            <a :href="data.facebook" target="_blank" class="facebook">Διατροφολόγος - Διαιτολόγος <span>Ιωάννα Παπατζανή</span></a>
           </li>
           <li>
             <img src="/assets/icons/Instagram.svg" alt="">
@@ -44,6 +44,7 @@
       <img src="../assets/icons/wheat-stems.svg"  alt="wheat-stacks" class="wheat">
       <!-- <img loading="lazy" src="../assets/icons/wheat-stems.svg"  alt="wheat-stacks" class="wheat"> -->
     </div>
+    <!-- <NuxtLink to="/credits" class="credits">credits</NuxtLink> -->
   </footer>
 </template>
 
@@ -103,6 +104,15 @@ footer:deep(a) {
   &:hover {
     opacity: 0.8;
   }
+
+  &.facebook {
+    display: flex;
+    flex-direction: column;
+
+    /* span {
+      font-size: smaller;
+    } */
+  }
 }
 
 .wheat {
@@ -114,6 +124,14 @@ footer:deep(a) {
   /* max-height: 24rem; */
 }
 
+
+.credits {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  opacity: .7;
+  font-size: smaller;
+}
 
 @media screen and (max-width: 767px) {
   footer {
@@ -136,5 +154,11 @@ footer:deep(a) {
   .wheat {
     max-width: 13rem;
   }
+
+  /* .credits {
+    position: absolute;
+    bottom: 2rem;
+    right: unset;
+  } */
 }
 </style>

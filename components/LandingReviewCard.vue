@@ -1,7 +1,10 @@
 <template>
   <article class="review-card">
     <div class="icons">
+    <NuxtLink :to="review.link" target="blank" class="text">
+      
       <img src="../assets/icons/google-icon.png" alt="google icon" width="35" heigh="35" class="google-icon">
+    </NuxtLink>
       <div class="stars">
         <template v-for="i in 5" id="i">
           <img src="../assets/icons/star.svg" alt="star" width="35" heigh="35">
@@ -12,10 +15,10 @@
       <h3>{{ review.name }}</h3>
       <ContentRenderer class="content" :value="review" />
     </div> -->
-    <NuxtLink :to="review.link" target="blank" class="text">
+    <!-- <NuxtLink :to="review.link" target="blank" class="text"> -->
       <h3>{{ review.name }}</h3>
       <ContentRenderer class="content" :value="review" />
-    </NuxtLink>
+    <!-- </NuxtLink> -->
   </article>
 </template>
 
