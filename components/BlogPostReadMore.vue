@@ -13,8 +13,26 @@
   </section>
 </template>
 
-<script setup>
- const posts = await queryContent('blog').skip(4).find();
+<script lang="ts" setup>
+
+const props = defineProps<{
+  insideArticle: {
+    type: boolean,
+    required: false,
+  },
+  articleId: {
+    type: Number,
+  },
+}>()
+
+let posts = reactive([])
+
+if(props.insideArticle) {
+  posts = await queryContent('blog').where({_id: { $ne: props.articleId} }).find();
+}
+else {
+  posts = await queryContent('blog').skip(4).find();
+} 
 </script>
 
 <style scoped>

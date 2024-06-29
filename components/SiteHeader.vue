@@ -30,7 +30,7 @@ const toggleNav = (() => {
                         <NuxtLink to="/blog" @click="toggleNav">Blog</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink to="/contact" @click="toggleNav">Επικοινωνια</NuxtLink>
+                        <NuxtLink to="/contact" @click="toggleNav">Επικοινωνία</NuxtLink>
                     </li>
                 </ul>
             </nav>

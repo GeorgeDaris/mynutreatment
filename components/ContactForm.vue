@@ -27,7 +27,7 @@
     </label>
     <label>
       <span>
-        Μύνημα
+        Μήνυμα
       </span>
       <textarea required v-model="form.message"></textarea>
     </label>

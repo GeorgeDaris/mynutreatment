@@ -270,6 +270,15 @@ p {
     font-family: 'Dancing Script', cursive;
 }
 
+hr {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    width: 70%;
+    margin-inline: auto;
+    border: 0.1rem solid var(--primary-green);
+    border-radius: var(--radius-sm);
+}
+
 /* Prose related */
 .prose, .site-header {
     a:not(.has-image) {

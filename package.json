@@ -13,6 +13,7 @@
     "@hypernym/nuxt-gsap": "^2.4.2",
     "@nuxt/content": "^2.12.1",
     "@nuxt/image": "^1.5.0",
+    "@royalfig/share-button": "^1.0.19",
     "gsap": "^3.12.5",
     "nuxt": "^3.11.1",
     "postcss-nested": "^6.0.1",

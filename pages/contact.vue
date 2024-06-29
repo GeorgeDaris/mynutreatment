@@ -6,8 +6,7 @@
     
     <ContactForm />
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d208342.97881259205!2d24.947617007626963!3d35.321904582566034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ea9e000947e55a9%3A0x95e8fac4c1174105!2zTXludXRyZWF0bWVudCB8IM6UzrnOsc-Ez4HOv8-Gzr_Ou8-MzrPOv8-CIHwgzpnPic6szr3Ovc6xIM6gzrHPgM6xz4TOts6xzr3Org!5e0!3m2!1sen!2sgr!4v1719140478640!5m2!1sen!2sgr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-    class="map"></iframe>
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56237.7009479391!2d25.085147875931053!3d35.32012953281903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ea9e000947e55a9%3A0x95e8fac4c1174105!2zTXludXRyZWF0bWVudCB8IM6UzrnOsc-Ez4HOv8-Gzr_Ou8-MzrPOv8-CIHwgzpnPic6szr3Ovc6xIM6gzrHPgM6xz4TOts6xzr3Org!5e0!3m2!1sen!2sgr!4v1719310895692!5m2!1sen!2sgr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </template>
 <script setup>
 const {data} = await useAsyncData('contact', async () => {
@@ -32,6 +31,25 @@ header {
 
     p {
         margin-top: 6rem;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 15%;
+            transform: translateY(-50%);
+            right: 0;
+            padding-block: 5rem;
+            display: block;
+            width: 20rem;
+            height: 10rem;
+            padding-block: 2rem;
+            background-color: var(--off-red);
+            border-radius: var(--radius-sm);
+            border-top-left-radius: var(--radius-lg);
+            border-bottom-left-radius: var(--radius-lg);
+            z-index: -1;
+        }
     }
 }
 

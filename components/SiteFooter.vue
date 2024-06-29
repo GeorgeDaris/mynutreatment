@@ -2,9 +2,12 @@
   <footer>
     <img src="../assets/icons/white-logo.svg" alt="logo" class="logo" width="200" height="200">
     <div class="container">
-      <!-- <div>
+      <div>
         <h3>Μάθετε περισσότερα</h3>
           <ul>
+              <li>
+                  <NuxtLink to="/">Αρχική</NuxtLink>
+              </li>
               <li>
                   <NuxtLink to="/services">Υπηρεσίες</NuxtLink>
               </li>
@@ -15,12 +18,12 @@
                   <NuxtLink to="/blog">Blog</NuxtLink>
               </li>
               <li>
-                  <NuxtLink to="/contact">Επικοινωνια</NuxtLink>
+                  <NuxtLink to="/contact">Επικοινωνία</NuxtLink>
               </li>
           </ul>
-      </div> -->
+      </div>
       <div>
-        <h3>Επικοινωνια</h3>
+        <h3>Επικοινωνία</h3>
         <ul>
           <li>
             <img src="/assets/icons/Call.svg" alt="">
@@ -80,7 +83,7 @@ footer {
 
 .container {
   display: flex;
-  gap: 2rem;
+  gap: 6rem;
 
 }
 
@@ -108,6 +111,7 @@ footer:deep(a) {
   &.facebook {
     display: flex;
     flex-direction: column;
+    text-align: start;
 
     /* span {
       font-size: smaller;
@@ -139,10 +143,15 @@ footer:deep(a) {
     justify-content: center;
     text-align: center;
 
-    /* ul {
+    .container {
+      gap: 2rem;
+      flex-direction: column;
+    }
+
+    ul {
       display: grid;
       justify-items: center;
-    } */
+    }
   }
 
   .logo {

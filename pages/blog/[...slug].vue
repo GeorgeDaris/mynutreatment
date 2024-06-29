@@ -37,7 +37,7 @@ useSeoMeta({
 <template>
   <div>
     <BlogPost :post="data" /> 
-    <BlogPostReadMore />
+    <BlogPostReadMore :insideArticle="true" :articleId="data._id" />
   </div>
 </template>
 

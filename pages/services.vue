@@ -25,7 +25,7 @@
         <p>Εφόσον δεν υπάρχει δυνατότητα για μια δια ζώσης συνεδρία, το ραντεβού μας μπορεί να πραγματοποιηθεί διαδικτυακά. Τα στάδια που ακολουθούμε είναι ακριβώς τα ίδια καθώς με την σωστή καθοδήγηση ο διαιτώμενος μαθαίνει να μετράει τους πόντους και το βάρος μόνος του.</p>
         
         <MainButton size="small">
-          <NuxtLink to="/contact">Κλείσε ραντεβού</NuxtLink>
+          <NuxtLink to="/contact">Κλείστε ραντεβού</NuxtLink>
         </MainButton>
       </div>
       <NuxtPicture src="/images/services/online-meeting.jpg" width="525" height="400"  sizes="sm:500" loading="lazy" id="online"/>

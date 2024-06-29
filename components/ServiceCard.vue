@@ -63,8 +63,8 @@ const props = defineProps(['service'])
 h4 {
     margin-block: 1rem;
     /* preventing the icon from hiding the text */
-    margin-right: 8rem;
-    font-weight: normal;
+    margin-right: 5rem;
+    font-weight: bold;
 }
 
 .sub {

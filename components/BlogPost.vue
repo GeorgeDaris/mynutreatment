@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+
 const props = defineProps<{
   post: {
     type: Object,
@@ -19,6 +20,34 @@ const url = computed(() => {
   const imgUrl = img(props.post.image, { width: 200 })
   return `url('${imgUrl}')`
 })
+
+
+let shareResult = ref("")
+const copyURL = (async() => {
+  console.log()
+
+  const shareData = {
+    title: props.post.title,
+    url: window.location.href
+  }
+  
+  if(!navigator.canShare) {
+    navigator.clipboard.writeText(shareData.url)
+    shareResult.value = "Link copied!"
+
+    // setTimeout(() => {
+    //   shareResult.value = "", 200
+    // })
+  }
+  else {
+    try {
+      await navigator.share(shareData)
+    }
+    catch(err) {
+      console.log(err)
+    }
+  }
+})
 </script>
 
 <template>
@@ -30,10 +59,19 @@ const url = computed(() => {
           <!-- <img :src="post.image" :alt="post.alt"> -->
         </div>
         <h1>{{ post.title }}</h1>
-        <address>
-          <img :src="post.authorImage" :alt="post.author">
-          <a :href="post.authorLink">{{post.author}}</a>
-        </address>
+        <div>
+          <address>
+            <img :src="post.authorImage" :alt="post.author">
+            <a :href="post.authorLink">{{post.author}}</a>
+          </address>
+          <MainButton size="small">
+            <button @click="copyURL">Share</button>
+          </MainButton>
+          <p v-if="shareResult">{{ shareResult }}</p>
+        </div>
+
+
+        <!-- <ShareButton>SHARE</ShareButton> -->
 
       </header>
         <div class="prose">
@@ -62,6 +100,13 @@ address {
     color: inherit;
   }
 } 
+
+button {
+    appearance: none;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+  }
 
 article.blog-post {
     --bp-padding: 1rem;
@@ -126,7 +171,22 @@ article.blog-post {
 
     h1 {
       margin-top: 2rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    h1 + div {
+      display: flex;
+      align-content: center;
+
+      address {
+        margin-right: auto;
+      }
+
+      & p {
+        position: absolute;
+        right: 0;
+        bottom: -2rem;
+      }
     }
 
     h1, address, .prose {
