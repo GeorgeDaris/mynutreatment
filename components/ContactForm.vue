@@ -63,7 +63,7 @@ let success = ref(false)
 
 const submitForm = (async(form) => {
   sending.value = true
-  await $fetch('https://www.mynutreatment.gr/api/contact', {
+  await $fetch('https://www.mynutreatment.gr/server/api/contact', {
     method: 'POST',
     body: form,
   }).then(() => {
