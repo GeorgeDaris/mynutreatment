@@ -12,13 +12,13 @@ useSeoMeta({
   ogTitle: data.value.title,
   description: data.value.description,
   ogDescription: data.value.description,
-  ogImage: `https://mynutreatment.vercel.app/${data.value.image}`,
+  ogImage: `https://www.mynutreatment.gr/${data.value.image}`,
   author: data.value.author,
   byl: data.value.author,
   twitterCard: 'summary_large_image',
   twitterTitle: data.value.title,
   twitterDescription: data.value.description,
-  twitterImage: `https://mynutreatment.vercel.app/${data.value.image}`,
+  twitterImage: `https://www.mynutreatment.gr/${data.value.image}`,
   ogSiteName: "mynutreatment",
   articleAuthor: data.value.author
 })
