@@ -1,6 +1,6 @@
 ---
 phone: +30 6978312684
-email: info@mynutreatment.com
+email: info@mynutreatment.gr
 facebook: https://www.facebook.com/profile.php?id=61558622316544
 instagram: https://www.instagram.com/mynutreatment___/
 image: /images/contact/contact.jpg

@@ -11,7 +11,7 @@
       <span>
         Επώνυμο
       </span>
-      <input type="email" required v-model="form.lastName">
+      <input type="text" required v-model="form.lastName">
     </label>
     <label>
       <span>
@@ -39,6 +39,8 @@
       </button>
     </MainButton>
 
+    <p v-if="success" class="message">Το μήνυμα σας στάλθηκε επιτυχώς!</p>
+
     <!-- <pre>
       {{ form }}
     </pre> -->
@@ -47,6 +49,7 @@
 
 <script setup>
 const form = reactive({
+  subject: "Μύνημα απο πελάτη",
   name: "",
   lastName: "",
   email: "",
@@ -55,11 +58,33 @@ const form = reactive({
 })
 
 let sending = ref(false)
-let error = ref(false)
+let errors = ref(false)
 let success = ref(false)
 
-const submitForm = (() => {
-  
+const submitForm = (async(form) => {
+  sending.value = true
+  await $fetch('http://localhost:3000/api/contact', {
+    method: 'POST',
+    body: form,
+  }).then(() => {
+    errors.value = false
+    success.value = true
+    sending.value = false
+    form.subject = "Μύνημα απο πελάτη"
+    form.name =  ""
+    form.lastName = ""
+    form.email = ""
+    form.phoneNumber = ""
+    form.message = ""
+
+    setTimeout(() => {
+      success.value = false
+    }, 5000)
+  }).catch(() => {
+    errors.value = true,
+    success.value = false,
+    sending.value = false
+  })
 })
 </script>
 
@@ -98,6 +123,7 @@ form {
     input, textarea {
       width: 100%;
       padding-block: 0.5rem;
+      padding-inline: 0.25rem;
       margin-top: 0.5rem;
       display: block;
       background-color: inherit;
@@ -117,6 +143,10 @@ form {
     border: none;
     cursor: pointer;
   }
+}
+
+.message {
+  margin-inline: auto;
 }
 
 @media screen and (max-width: 767px) {

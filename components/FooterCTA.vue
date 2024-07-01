@@ -72,6 +72,7 @@ h2 {
     color: var(--white);
     letter-spacing: .1rem;
     -webkit-text-stroke: .08rem var(--dark-blue);
+    margin-left: 1rem;
   }
 
   .text {

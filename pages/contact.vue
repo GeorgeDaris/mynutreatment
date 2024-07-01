@@ -18,7 +18,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 1.25fr;
     gap: 2rem;
-    /* align-items: center; */
+    align-items: center;
 
     img {
         border-radius: var(--radius-sm);
@@ -30,15 +30,17 @@ header {
     }
 
     p {
-        margin-top: 6rem;
+        margin-bottom: 2rem;
+        margin-right: 2rem;
         position: relative;
 
         &::after {
             content: "";
             position: absolute;
-            top: 15%;
-            transform: translateY(-50%);
-            right: 0;
+            /* top: 15%;
+            transform: translateY(-50%); */
+            top: -2rem;
+            right: -2rem;
             padding-block: 5rem;
             display: block;
             width: 20rem;
@@ -65,7 +67,12 @@ header {
         }
 
         p {
-            margin-top: unset
+            margin-bottom: unset;
+            margin-right: unset;
+
+            &::after {
+                content: unset;
+            }
         }
     }
 }

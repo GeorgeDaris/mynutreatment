@@ -1,10 +1,10 @@
 <template>
   <!-- <TestComp /> -->
-  <SiteHeader />
+  <!-- <SiteHeader /> -->
   <main>
     <NuxtPage />
   </main>
-  <FooterCTA />
+  <!-- <FooterCTA v-if="!isContactPage" /> -->
   <SiteFooter />
 </template>
 <script setup lang="ts">
@@ -24,6 +24,12 @@ useHead({
     }
   ]
 })
+
+const route = useRoute();
+
+const isContactPage = computed(() => {
+  return route.name === 'contact';
+});
 </script>
 <style>
 .page-enter-active,

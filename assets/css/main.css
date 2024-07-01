@@ -222,6 +222,12 @@ h1:not(.prose *, .blog-post *) {
     margin-block: 6rem;
 }
 
+@media screen and (max-width: 767px) {
+    .block {
+        margin-block: 2rem;
+    }    
+}
+
 .prose h2 {
     font-size: var(--header-md);
 }
