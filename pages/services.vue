@@ -3,7 +3,7 @@
     <section class="meeting-grid">
       <h2>Συνεδρίες</h2>
 
-      <NuxtPicture src="/images/services/meeting.jpg" width="550" height="260" sizes="sm:500"/>
+      <NuxtPicture src="/images/services/meeting.jpg" width="550" height="260" sizes="sm:500" alt="Meetings" />
       <div class="container">
         <h3 class="remove-pseudo">Τι περιλαμβάνει μια συνεδρία;</h3>
         <p>Ξεκινάμε με την λήψη διατροφικού ιστορικού ώστε να μπορέσουμε να εντοπίσουμε τις υπάρχουσες συνήθειες και μαζί να ανακαλύψουμε πώς αυτές μπορούν να προσαρμοστούν. Λαμβάνουμε υπόψιν τις ιατρικές εξετάσεις, την φαρμακευτική αγωγή και τις σωματομετρικές μετρήσεις.</p>
@@ -17,7 +17,7 @@
       </div> -->
       <CardStack />
 
-      <NuxtPicture src="/images/services/measuring-client.jpg" width="350" height="450" sizes="sm:500" loading="lazy"/>
+      <NuxtPicture src="/images/services/measuring-client.jpg" width="350" height="450" sizes="sm:500" loading="lazy" alt="Ioanna Papatzani taking a client's measurements" />
       <p class="measure-para">Σε κάθε συνεδρία πραγματοποιούμε αξιολόγηση σωματικού βάρους, ανάλογα τον διαιτώμενο και τις ανάγκες του. Τα εργαλεία μας είναι ο λιπομετρητής για την ανάλυση σύστασης σώματος και η μεζούρα για την παρακολούθηση πόντων σε συγκεκριμένα σημεία στο σώμα.</p>
 
       <div class="container">
@@ -28,7 +28,7 @@
           <NuxtLink to="/contact">Κλείστε ραντεβού</NuxtLink>
         </MainButton>
       </div>
-      <NuxtPicture src="/images/services/online-meeting.jpg" width="525" height="400"  sizes="sm:500" loading="lazy" id="online"/>
+      <NuxtPicture src="/images/services/online-meeting.jpg" width="525" height="400"  sizes="sm:500" loading="lazy" id="online" alt="Ioanna Papatzani at her desk during an online meeting"/>
 
 
     </section>
@@ -280,12 +280,30 @@ onMounted(() => {
         }
       }
 
-      picture:nth-of-type(2) {
+      /* picture:nth-of-type(2) { */
         
 
         /* &:deep(img) {
           margin-inline: auto;
         } */
+      /* } */
+
+      picture:nth-of-type(2) {
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -2rem;
+            right: -8rem;
+            padding-block: 5rem;
+            display: block;
+            width: 25rem;
+            height: 30%;
+            padding-block: 2rem;
+            background-color: var(--off-red);
+            border-radius: var(--radius-lg);
+            z-index: -1;
+          }
       }
 
       picture:nth-of-type(3) {

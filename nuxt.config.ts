@@ -7,7 +7,7 @@ export default defineNuxtConfig({
       'postcss-nested': {}
     }
   },
-  modules: ['@nuxt/content', "@nuxt/image", "@hypernym/nuxt-gsap"],
+  modules: ['@nuxt/content', "@nuxt/image", "@hypernym/nuxt-gsap", '@nuxtjs/sitemap'],
   image: {
     // dir: 'assets/images',
     // provider: 'IPX',
@@ -20,6 +20,9 @@ export default defineNuxtConfig({
       scrollTrigger: true,
       scrollTo: true
     }
+  },
+  site: {
+    url: 'https://mynutreatment.gr'
   },
   // content: {
     

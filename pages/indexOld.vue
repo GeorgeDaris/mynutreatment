@@ -1,28 +1,40 @@
 <template>
   <div class="wrapper">
-    <HeroSection :data="intro" />
+    <!-- <TestComp /> -->
+    
+    <!-- <img src="/assets/icons/logo.svg" alt="">
+    <h1 class="remove-pseudo">
+      Coming soon!
+    </h1>
+    <address>
+      <a href="mailto:mynutreatment@info.com">mynutreatment@info.com</a>
+    </address> -->
+    <!-- <HeroSection /> -->
+    <HeroSectionComingSoon />
+    <!-- <address>
+      <a href="mailto:mynutreatment@info.com">mynutreatment@info.com</a>
+      <br>
+      <br>
+      <div>
+        <a href="tel:+30 6978312684">+30 6978312684</a>
+      </div>
+    </address> -->
 
-    <AboutCard :data="data" :is-section="true" id="box" />
+    <!-- <AboutCard :data="data" :is-section="true" /> -->
+    <!-- <ClientOnly >
+      <AboutCard :data="data" :is-section="true" />
+    </ClientOnly> -->
+    <AboutCardComingSoon :is-section="true" />
 
-    <LandingServices />
+    <!-- <LandingServices />
 
     <BlogPostShowcase :is-section="true" />
 
-    <LandingReviews />
-
-    <!-- <FooterCTA /> -->
-
-    <!-- <div id="box">this is a test</div> -->
+    <LandingReviews /> -->
   </div>
 </template>
 
 <script setup>
-// import * as useGsap from '@hypernym/nuxt-gsap';
-// const {gsap} = useNuxtApp()
-// import gsap from "@hypernym"
-// import {gsap} from '@hypernym/nuxt-gsap'
-const {$gsap, $ScrollTrigger} = useNuxtApp()
-
 useSeoMeta({
   title: "mynutreatment",
   ogTitle: "mynutreatment",
@@ -41,43 +53,20 @@ useSeoMeta({
 
 
 
-const {data} = await useAsyncData('about', async () => {
-    return await queryContent('main/landing-page/about').findOne();
-})
+// const {data} = await useAsyncData('about', async () => {
+//     return await queryContent('main/landing-page/about').findOne();
+// })
 
-const intro = await queryContent('main/landing-page/intro').findOne();
+// let data = ref();
 
-onMounted(() => {
-  // useGsap.from('#box', {
-  //   y: 100,
-  //   opacity: 0,
-  //   delay: 1,
-  //   ScrollTrigger: {
-  //     trigger: '#box',
-  //     start: "top center",
-  //     end: 'bottom center',
-  //     scrub: 1,
-  //     markers: true
-  //   }
-  // })
-
-  // $gsap.to('#box', { 
-  //   rotation: 0,
-  //   x: 0, 
-  //   startAt: {
-  //     x: -200,
-  //   },
-  //   duration: 7 ,
-  //   scrollTrigger: {
-  //     trigger: '#box',
-  //     start: "top center",
-  //     end: '50% center',
-  //     scrub: 1,
-  //     markers: true
-  //   }
-  // })
-})
-
+// onMounted(async () => {
+//   try {
+//     data.value = await queryContent('main/landing-page/about').findOne();
+//   } catch (err) {
+//     error.value = err;
+//     console.error('Content query failed:', err);
+//   }
+// });
 </script>
 
 <style scoped>

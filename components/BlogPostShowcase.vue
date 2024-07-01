@@ -65,8 +65,15 @@ const props = defineProps({
 
     .content {
       grid-template-rows: min-content;
+      max-height: min-content;
+    }
+
+    &:not(:first-of-type) {
+      max-height: 20rem;
     }
   }
+
+
 
   .sh-card:nth-of-type(1) {
     grid-column: 1 / 3;

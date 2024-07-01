@@ -1,11 +1,8 @@
 <template>
   <div class="container card-stack">
-        <!-- <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div> -->
-        <NuxtPicture src="images/services/slideshow/composition.jpeg" alt="post.alt"  width="400" height="200" sizes="sm:800" placeholder fit="cover" class="card"/>
-        <NuxtPicture src="images/services/slideshow/slideshow.jpg" alt="post.alt"  width="400" height="200" sizes="sm:800" placeholder fit="cover" class="card"/>
-        <NuxtPicture src="/images/services/slideshow/scale.jpeg" alt="post.alt"  width="400" height="200" sizes="sm:800" placeholder fit="cover" class="card" />
+        <NuxtPicture src="images/services/slideshow/composition.jpeg" alt="a stack of weekly meal plans on a desk, with a book on nutrition on top"  width="400" height="200" sizes="sm:800" placeholder fit="cover" class="card"/>
+        <NuxtPicture src="images/services/slideshow/slideshow.jpg" alt="Measurements"  width="400" height="200" sizes="sm:800" placeholder fit="cover" class="card"/>
+        <NuxtPicture src="/images/services/slideshow/scale.jpeg" alt="Scale"  width="400" height="200" sizes="sm:800" placeholder fit="cover" class="card" />
       </div>
 </template>
 
@@ -109,12 +106,13 @@
       &:nth-of-type(2) {
             transform: translateY(-6rem) translateX(1rem);
           /* rotate: unset; */
+          z-index: 8;
 
           }
 
           &:nth-of-type(3) {
             display: none;
-            transform: translateY(-28rem) translateX(-8rem);
+            transform: translateY(-10rem) translateX(-4rem);
           }
     }
   }  

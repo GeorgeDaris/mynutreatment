@@ -2,7 +2,7 @@
   <footer>
     <img src="../assets/icons/white-logo.svg" alt="logo" class="logo" width="200" height="200">
     <div class="container">
-      <!-- <div>
+      <div>
         <h3>Μάθετε περισσότερα</h3>
           <ul>
               <li>
@@ -21,7 +21,7 @@
                   <NuxtLink to="/contact">Επικοινωνία</NuxtLink>
               </li>
           </ul>
-      </div> -->
+      </div>
       <div>
         <h3>Επικοινωνία</h3>
         <ul>

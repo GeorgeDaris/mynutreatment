@@ -115,9 +115,9 @@ article {
       transform: translateX(5rem);
     }
 
-    &:last-of-type:hover {
+    /* &:last-of-type:hover {
       padding-right: 5rem;
-    }
+    } */
   }
 }
 

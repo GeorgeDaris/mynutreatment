@@ -1,10 +1,9 @@
 <template>
-  <!-- <TestComp /> -->
-  <!-- <SiteHeader /> -->
+  <SiteHeader />
   <main>
     <NuxtPage />
   </main>
-  <!-- <FooterCTA v-if="!isContactPage" /> -->
+  <FooterCTA v-if="!isContactPage" />
   <SiteFooter />
 </template>
 <script setup lang="ts">

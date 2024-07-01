@@ -90,8 +90,9 @@ address {
   gap: .5rem;
 
   img {
-    max-width: 2.25rem;
+    max-width: 2.5rem;
     max-height: 3rem;
+    border-radius: 50rem;
   }
 
   a {
