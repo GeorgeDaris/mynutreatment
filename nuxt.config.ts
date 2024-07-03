@@ -10,6 +10,7 @@ export default defineNuxtConfig({
   modules: ['@nuxt/content', "@nuxt/image", "@hypernym/nuxt-gsap", '@nuxtjs/sitemap'],
   image: {
     // dir: 'assets/images',
+    // dir: '/',
     // provider: 'IPX',
     format: ['avif', 'webp', 'png']
   },
