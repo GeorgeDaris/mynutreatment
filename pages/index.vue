@@ -23,6 +23,14 @@
 // import {gsap} from '@hypernym/nuxt-gsap'
 const {$gsap, $ScrollTrigger} = useNuxtApp()
 
+useHead({
+  meta: [
+    {
+      name: 'google-site-verification', content: '70_fkNL_zHc1hWqiavt2jcRb38jmO9LrRNXycHsNYVM'
+    }
+  ]
+})
+
 useSeoMeta({
   title: "mynutreatment",
   ogTitle: "mynutreatment",
