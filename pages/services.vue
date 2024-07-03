@@ -57,6 +57,22 @@ const {data} = await useAsyncData('categories', async () => {
     return categories
 })
 
+useSeoMeta({
+  title: "mynutreatment",
+  ogTitle: "mynutreatment",
+  description: "Ιωάννα Παπατζανή | Διατροφολόγος-Διαιτολόγος | Ηράκλειο Κρήτης. Υπηρεσίες Διατροφής: Διαχείριση Βάρους, Κλινική Διατροφή, Αλλαγή διατροφικών συνηθειών, Παιδική Παχυσαρκία, Συνεδρίες ΟΠΙΙΙΙΘ, Εξατομικευμένη προσέγγιση σύμφωνα με τις ανάγκες σας.",
+  ogDescription: "Ιωάννα Παπατζανή | Διατροφολόγος-Διαιτολόγος | Ηράκλειο Κρήτης. Υπηρεσίες Διατροφής: Διαχείριση Βάρους, Κλινική Διατροφή, Αλλαγή διατροφικών συνηθειών, Παιδική Παχυσαρκία, Συνεδρίες ΟΠΙΙΙΙΘ, Εξατομικευμένη προσέγγιση σύμφωνα με τις ανάγκες σας.",
+  ogImage: "/images/services/measuring-client.jpg",
+  twitterCard: 'summary_large_image',
+  themeColor: "#C6DBC3",
+  ogUrl: `https://www.mynutreatment.gr/services`,
+  twitterCard: 'summary_large_image',
+  twitterTitle: "mynutreatment",
+  twitterDescription: "Ιωάννα Παπατζανή | Διατροφολόγος-Διαιτολόγος | Ηράκλειο Κρήτης. Υπηρεσίες Διατροφής: Διαχείριση Βάρους, Κλινική Διατροφή, Αλλαγή διατροφικών συνηθειών, Παιδική Παχυσαρκία, Συνεδρίες ΟΠΙΙΙΙΘ, Εξατομικευμένη προσέγγιση σύμφωνα με τις ανάγκες σας.",
+  twitterImage: `/images/services/measuring-client.jpg`,
+  ogSiteName: "mynutreatment",
+})
+
 const {$gsap, $ScrollTrigger} = useNuxtApp()
 
 onMounted(() => {
