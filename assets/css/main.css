@@ -72,6 +72,10 @@
     body {
         overflow-x: hidden;
         position: relative;
+
+        #__nuxt {
+            overflow-x: hidden;
+        }
     }
 }
 
