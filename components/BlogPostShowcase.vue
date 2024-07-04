@@ -110,6 +110,7 @@ const props = defineProps({
     animation-fill-mode: forwards;
 
     .content {
+      padding-right: 0rem;
       grid-column: 1 / 2;
       grid-row: 1 / 3;
     }
@@ -153,20 +154,26 @@ const props = defineProps({
     }
   }
 
-  .sh-card:nth-of-type(4) {
+ .sh-card:nth-of-type(4) {
     grid-column: 4 / 5;
     grid-row: 4 / 6;
+    grid-template-rows: 6rem auto;
 
-    display: block;
-    position: relative;
+    /* display: block;
+    position: relative; */
     border-bottom-right-radius: var(--radius-60);
 
     animation-name: slidefrombottom;
     animation-duration: 0.4s;
     animation-delay: 1s;
     animation-fill-mode: forwards;
+ }
 
-    picture {
+ /* picture {
+  max-height: 2rem;
+ } */
+
+    /*picture {
       position: absolute;
       bottom: 0;
       right: 0;
@@ -176,13 +183,14 @@ const props = defineProps({
 
     img {
       border-top-left-radius: 50rem;
-      /* max-height: 5rem; */
+      was commented out 
+      max-height: 5rem; 
     }
 
     p {
       display: none;
     }
-  }
+  } */
 }
 
 @media screen and (max-width: 767px) {
@@ -194,6 +202,10 @@ const props = defineProps({
           border-top-right-radius: var(--radius-sm);
           grid-template-columns: 1fr 0.5fr;
           gap: 0;
+
+          .content {
+            padding-right: 1rem;
+          }
         }
 
         .sh-card:nth-of-type(3) {
