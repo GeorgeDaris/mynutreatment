@@ -33,7 +33,7 @@
 
     </section>
     <section class="services-grid">
-      <h2 id="categories">Υπηρεσίες</h2>
+      <h2 id="category">Υπηρεσίες</h2>
       <!-- <template v-for="category in data"> -->
         <ServiceList :category="data">
         </ServiceList>

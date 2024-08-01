@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="contact-wrapper">
         <header>
             <img :src="data.image" alt="">
             <p>{{ data.description }}</p>
@@ -16,6 +16,9 @@ const {data} = await useAsyncData('contact', async () => {
 })
 </script>
 <style scoped>
+.contact-wrapper {
+    display: grid;
+}
 header {
     display: grid;
     grid-template-columns: 1fr 1.25fr;
