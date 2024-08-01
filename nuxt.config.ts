@@ -7,7 +7,7 @@ export default defineNuxtConfig({
       'postcss-nested': {}
     }
   },
-  modules: ['@nuxt/content', "@nuxt/image", "@hypernym/nuxt-gsap", '@nuxtjs/sitemap'],
+  modules: ['@nuxt/content', "@nuxt/image", "@hypernym/nuxt-gsap", '@nuxtjs/sitemap', '@nuxthq/studio'],
   image: {
     // dir: 'assets/images',
     // dir: '/',
