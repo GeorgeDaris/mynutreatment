@@ -7,6 +7,7 @@ const props = defineProps<{
 
     title: string,
     image: string,
+    credit: string,
     alt: string,
     author: string,
     authorImage: string,
@@ -53,7 +54,7 @@ const copyURL = (async() => {
 <template>
   <article class="blog-post">
       <header>
-        <div class="img-wrapper">
+        <div class="img-wrapper" :data-credit="post.credit">
           <NuxtPicture :src="post.image" :alt="post.alt"  width="886" height="620" sizes="sm:800" placeholder fit="cover" />
 
           <!-- <img :src="post.image" :alt="post.alt"> -->
@@ -151,6 +152,18 @@ article.blog-post {
               z-index: -1;
 
             }
+
+            &::after {
+              content: v-bind('post.credit');
+              content: attr(data-credit);
+              /* content: 'red'; */
+              position: absolute;
+              right: .75rem;
+              bottom: -1.7rem;
+              font-size: smaller;
+            }
+
+
 
             &:deep(img) {
                 position: relative;

@@ -2,14 +2,15 @@
   <div>
     <section class="meeting-grid">
       <h2>Συνεδρίες</h2>
-
+      
+      <!-- {{ meetingParas }} -->
       <NuxtPicture src="/images/services/meeting.jpg" width="550" height="260" sizes="sm:500" alt="Meetings" />
       <div class="container">
-        <h3 class="remove-pseudo">Τι περιλαμβάνει μια συνεδρία;</h3>
-        <p>Ξεκινάμε με την λήψη διατροφικού ιστορικού ώστε να μπορέσουμε να εντοπίσουμε τις υπάρχουσες συνήθειες και μαζί να ανακαλύψουμε πώς αυτές μπορούν να προσαρμοστούν. Λαμβάνουμε υπόψιν τις ιατρικές εξετάσεις, την φαρμακευτική αγωγή και τις σωματομετρικές μετρήσεις.</p>
+        <h3 class="remove-pseudo">{{ meeting.title }}</h3>
+        <p>{{ meeting.description }}</p>
       </div>
 
-      <p>Μαθαίνουμε καινούργιες τεχνικές που αφορούν την οργάνωση των γευμάτων και δημιουργούμε ένα εξατομικευμένο πρόγραμμα διατροφής, προσαρμοσμένο στις προτιμήσεις και στους ρυθμούς ζωής του ατόμου.</p>
+      <p>{{meetingParas[1]}}</p>
       <!-- <div class="container card-stack">
         <div class="card"></div>
         <div class="card"></div>
@@ -18,11 +19,11 @@
       <CardStack />
 
       <NuxtPicture src="/images/services/measuring-client.jpg" width="350" height="450" sizes="sm:500" loading="lazy" alt="Ioanna Papatzani taking a client's measurements" />
-      <p class="measure-para">Σε κάθε συνεδρία πραγματοποιούμε αξιολόγηση σωματικού βάρους, ανάλογα τον διαιτώμενο και τις ανάγκες του. Τα εργαλεία μας είναι ο λιπομετρητής για την ανάλυση σύστασης σώματος και η μεζούρα για την παρακολούθηση πόντων σε συγκεκριμένα σημεία στο σώμα.</p>
+      <p class="measure-para">{{meetingParas[2]}}</p>
 
       <div class="container">
-        <h3 class="remove-pseudo">Τι περιλαμβάνει μια εξ αποστάσεως (online) συνεδρία;</h3>
-        <p>Εφόσον δεν υπάρχει δυνατότητα για μια δια ζώσης συνεδρία, το ραντεβού μας μπορεί να πραγματοποιηθεί διαδικτυακά. Τα στάδια που ακολουθούμε είναι ακριβώς τα ίδια καθώς με την σωστή καθοδήγηση ο διαιτώμενος μαθαίνει να μετράει τους πόντους και το βάρος μόνος του.</p>
+        <h3 class="remove-pseudo">{{online.title}}</h3>
+        <p>{{online.description}}</p>
         
         <MainButton size="small">
           <NuxtLink to="/contact">Κλείστε ραντεβού</NuxtLink>
@@ -56,6 +57,35 @@ const {data} = await useAsyncData('categories', async () => {
 
     return categories
 })
+
+// const mainText = await queryContent('main/services').findOne();
+const meeting = await queryContent('main/services/main/meeting').findOne();
+
+function extractParagraphs(data) {
+  const paragraphs = [];
+
+  function traverse(node) {
+    if (node.type === 'element' && node.tag === 'p') {
+      const textNode = node.children.find(child => child.type === 'text');
+      if (textNode) {
+        paragraphs.push(textNode.value);
+      }
+    }
+
+    if (node.children) {
+      node.children.forEach(child => traverse(child));
+    }
+  }
+
+  traverse(data);
+  return paragraphs;
+}
+
+// Get the paragraphs array
+const meetingParas = extractParagraphs(meeting.body);
+
+
+const online = await queryContent('main/services/main/online').findOne();
 
 useSeoMeta({
   title: "mynutreatment",
