@@ -70,7 +70,7 @@ const submitForm = (async(form) => {
     errors.value = false
     success.value = true
     sending.value = false
-    form.subject = "Μύνημα απο πελάτη"
+    form.subject = "Μήνυμα απο πελάτη"
     form.name =  ""
     form.lastName = ""
     form.email = ""
