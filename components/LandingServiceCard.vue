@@ -8,7 +8,8 @@
       </header>
       <p class="truncated-text">{{ service.description }}</p>
       <MainButton class="link">
-        <NuxtLink to="/services#category">Μάθετε περισσότερα</NuxtLink>
+        <NuxtLink to="/services#category" v-if="!service.link">Μάθετε περισσότερα</NuxtLink>
+        <NuxtLink :to="`/services#${service.link}`" v-else>Μάθετε περισσότερα</NuxtLink>
       </MainButton>
     </div>
   </article>
@@ -23,7 +24,8 @@ const props = defineProps<{
     title: string,
     description: string,
     image: string,
-    alt: string
+    alt: string,
+    link: string
   }
 }>()
 

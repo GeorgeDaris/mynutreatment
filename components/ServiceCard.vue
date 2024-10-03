@@ -1,6 +1,6 @@
 <template>
     <div class="service-card">
-        <h4>{{service.title}}</h4>
+        <h4 :id="service.id ? service.id : ''">{{service.title}}</h4>
         <p v-if="service.subheader" class="sub">{{ service.subheader }}</p>
         <div class="icon-wrapper">
             <NuxtImg :src="service.icon" alt="" aria-hidden="true"/>
@@ -65,6 +65,7 @@ h4 {
     /* preventing the icon from hiding the text */
     margin-right: 5rem;
     font-weight: bold;
+    scroll-margin: 10rem 10rem;
 }
 
 .sub {

@@ -49,7 +49,7 @@
 
 <script setup>
 const form = reactive({
-  subject: "Μύνημα απο πελάτη",
+  subject: "Μήνυμα απο πελάτη",
   name: "",
   lastName: "",
   email: "",
@@ -70,7 +70,7 @@ const submitForm = (async(form) => {
     errors.value = false
     success.value = true
     sending.value = false
-    form.subject = "Μύνημα απο πελάτη"
+    form.subject = "Μήνυμα απο πελάτη"
     form.name =  ""
     form.lastName = ""
     form.email = ""
