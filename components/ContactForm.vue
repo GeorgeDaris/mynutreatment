@@ -49,7 +49,7 @@
 
 <script setup>
 const form = reactive({
-  subject: "Μύνημα απο πελάτη",
+  subject: "Μήνυμα απο πελάτη",
   name: "",
   lastName: "",
   email: "",
