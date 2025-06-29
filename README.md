@@ -1,6 +1,9 @@
-# Nuxt 3 Minimal Starter
+# mynutreatment
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/f4ebafd0-8716-4e56-a9de-f36c419a6170" alt="Home page preview"/>
+</div>
+
 
 ## Setup
 
