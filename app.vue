@@ -3,6 +3,7 @@
   <main>
     <NuxtPage />
   </main>
+  <CookieBanner />
   <FooterCTA v-if="!isContactPage" />
   <SiteFooter />
 </template>
